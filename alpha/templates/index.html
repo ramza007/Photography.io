@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap3 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+
+    {% block styles %}
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    {% endblock %}
+
+</head>
+{% block content %}
+<!-- font styles -->
+        <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+<!-- end fonts -->
+<div class="container1">
+    <body>
+        <h1 style="font-family: 'Alfa Slab One', cursive;">Welcome to my space</h1>
+    </body>
+</div>
+<div class="container2">
+    <h2 style="font-family: 'Alfa Slab One', cursive;">Know about me...</h2>
+    
+    <p>
+        <img src="../static/images/ramza1.JPG">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta nam sunt laborum, necessitatibus harum, provident eius excepturi nemo consequatur itaque eveniet cupiditate illo ex vitae. Rem nihil porro amet quo? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam illum illo est sed quia repellat, provident itaque dolorem totam quisquam alias, nemo atque facilis? Hic maiores ea dolore aperiam officia!
+    </p>
+</div>
+
+{% endblock %}
+</html>
