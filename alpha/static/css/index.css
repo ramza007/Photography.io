@@ -1,0 +1,38 @@
+h1{
+    text-align: center;
+    font-size: 300%;
+    color: white;
+    opacity: 0.9;
+}
+
+h2{
+    text-align: center;
+    font-size: 300%;
+    color: black;
+    opacity: 0.9;
+}
+
+.container1{
+    background-image: url(../images/ramza1.JPG);
+    background-size: cover;
+    padding: 27%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container2{
+    padding: 15%;
+}
+
+img{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+p{
+    padding-top: 2%;
+    float: right;
+    text-align: right;
+    
+}
