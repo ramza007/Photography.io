@@ -1,0 +1,10 @@
+virtual/
+*.pyc
+instance/
+.vscode/
+__pycache__/
+**/.DS_Store
+start.sh
+migrations/
+.env
+db.sqlite3
