@@ -22,12 +22,15 @@
 </head>
 <body>
 {% block content %}
+{% include 'navbar.html' %}
 <div class="container1">
         <h1 style="font-family: 'Alfa Slab One', cursive;">Welcome to my space</h1>
+        <h4>The Photographer</h4>
 </div>
 
 
-<div class="container2">
+<a name="about"></a>
+    <div class="container2">
     <h2 style="font-family: 'Alfa Slab One', cursive; padding-bottom: 5%;">Know about me...</h2>
     
     <img align="left" src="../static/images/ramza2.JPG" style="width: 50%; height: 100%;">
@@ -45,6 +48,7 @@
     </p>
 </div>
 
+<a name="samples"></a>
 <div class="container3">
     <p style="font-family: 'Anton', sans-serif; text-align: center;">
         If you get up in the morning and think the future is going to be better, it is a bright day. Otherwise, it's not.

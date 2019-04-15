@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 h1{
     text-align: center;
     font-size: 300%;
@@ -12,10 +15,15 @@ h2{
     opacity: 0.9;
 }
 
+h4{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
 .container1{
     background-image: url(../images/ramza1.JPG);
     background-size: 100%;
-    padding: 27%;
+    padding: 25%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     text-align: center;
@@ -23,7 +31,7 @@ h2{
 }
 
 .container2{
-    padding: 15%;
+    padding: 8% 15% 10% 15%;
     text-align: left;
 }
 
@@ -53,5 +61,5 @@ p{
     -o-background-size:cover;
     color: white;
     font-size: 190%;
-    margin-bottom: 20%;
+    margin-bottom: 5%;
 }
