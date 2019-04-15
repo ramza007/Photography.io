@@ -44,7 +44,7 @@ img{
 
 p{
     padding-top: 2%;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Rokkitt', serif;
     font-size: 115%;   
 }
 
@@ -62,4 +62,10 @@ p{
     color: white;
     font-size: 190%;
     margin-bottom: 5%;
+}
+
+.container-fluid{
+    padding: 2% 10% 20% 10%;
+    background-color: black;
+    text-align: center;
 }
