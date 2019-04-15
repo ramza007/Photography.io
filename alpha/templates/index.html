@@ -13,30 +13,25 @@
     {% block styles %}
     {% bootstrap_css %}
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <!-- font styles -->
+        <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <!-- end fonts -->
     {% endblock %}
 
 </head>
 <body>
 {% block content %}
-<!-- font styles -->
-        <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
-
-<!-- end fonts -->
-
-{% include 'navbar.html' %}
-
-
 <div class="container1">
         <h1 style="font-family: 'Alfa Slab One', cursive;">Welcome to my space</h1>
 </div>
 
 
 <div class="container2">
-    <h2 style="font-family: 'Alfa Slab One', cursive;">Know about me...</h2>
+    <h2 style="font-family: 'Alfa Slab One', cursive; padding-bottom: 5%;">Know about me...</h2>
     
-    <p>
-        <img src="../static/images/ramza1.JPG" style="width: 50%; height: 100%;float: left;">
+    <img align="left" src="../static/images/ramza2.JPG" style="width: 50%; height: 100%;">
+    <p align="right" style="text-align: left; padding-left: 50%;">
             Hi, my name is Ramza Reseni, a photographer and a web developer. My passion for photography stated when I got my first smartphone, and started ameture photography with a 1 megapixel camera. I built this into a passion and have never looked back ever since.
 
             <br><br>

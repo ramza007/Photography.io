@@ -14,38 +14,43 @@ h2{
 
 .container1{
     background-image: url(../images/ramza1.JPG);
-    background-size: cover;
+    background-size: 100%;
     padding: 27%;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    text-align: center;
+    font-size: 100%;
 }
 
 .container2{
     padding: 15%;
+    text-align: left;
 }
 
 img{
     width: 50%;
     height: 100%;
-    /* float: left; */
+    padding-right: 5%;
+    border-radius: 5px;
 }
 
 p{
     padding-top: 2%;
-    float: right;
-    text-align: right;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 115%;    
+    font-size: 115%;   
 }
 
 .container3{
-    margin-top: 30%;
+    margin-top: 10%;
     padding: 20%;
     background-image: url(../images/banner1.jpg);
     background-position: center;
-    /* background-repeat: no-repeat;  */
-    background-size: cover;
-    background-attachment: fixed;
+    background-size: 100%;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
     color: white;
     font-size: 190%;
     margin-bottom: 20%;
