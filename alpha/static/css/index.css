@@ -17,7 +17,8 @@ h2{
 
 h4{
     color: white;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Rokkitt', serif;
+    padding-top: 1%;
 }
 
 .container1{
@@ -62,6 +63,7 @@ p{
     color: white;
     font-size: 190%;
     margin-bottom: 5%;
+    /* filter: blur(1px); */
 }
 
 .container-fluid{
@@ -69,3 +71,4 @@ p{
     background-color: black;
     text-align: center;
 }
+
