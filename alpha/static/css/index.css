@@ -72,3 +72,6 @@ p{
     text-align: center;
 }
 
+@viewport {
+  width: device-width;
+}

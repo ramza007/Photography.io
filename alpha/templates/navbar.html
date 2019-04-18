@@ -1,5 +1,8 @@
 {% load bootstrap3 %}
 {% load static %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 {% block styles %}
 <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -7,15 +10,16 @@
 {% endblock %}
 
 <div class="topnav">
-    <a href="#">RAMZA OMBATI</a>
+    <a href="/">RAMZA OMBATI</a>
     <div class="topnav" id="myTopnav">
     <ul class="nav navbar-nav navbar-right">
         <a href="#about">ABOUT</a>
+        <!-- <a href="{% url 'photos' %}">PHOTOGRAPHY</a> -->
         <a href="#samples">PHOTOGRAPHY</a>
         <a href="#contact">CONTACT</a>
-        <a href="https://www.instagram.com/itsramza/"><i class="fa fa-instagram" style="font: size 15%;"></i></a>
-        <a href="https://twitter.com/ramzaxx"><i class="fa fa-twitter" style="font: size 15%;"></i></a>
-        <a href="https://www.linkedin.com/in/ramza-reseni/"><i class="fa fa-linkedin" style="font: size 15%;"></i></a>
+        <a href="https://www.instagram.com/itsramza/"><i class="fa fa-instagram" style="font: size 50%;"></i></a>
+        <a href="https://twitter.com/ramzaxx"><i class="fa fa-twitter" style="font: size 50%;"></i></a>
+        <a href="https://www.linkedin.com/in/ramza-reseni/"><i class="fa fa-linkedin" style="font: size 50%;"></i></a>
     </ul>
         <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>

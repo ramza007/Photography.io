@@ -47,3 +47,11 @@
     text-align: left;
   }
 }
+
+
+.Navbar__Link-toggle {
+  align-self: flex-end;
+  display: initial;
+  position: absolute;
+  cursor: pointer;
+}
