@@ -12,14 +12,41 @@
     {% block styles %}
     {% bootstrap_css %}
     <link rel="stylesheet" href="{% static 'css/photos.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
 
     {% endblock %}
 </head>
 <body>
 {% block content %}
-{% include 'navbar.html' %}
-    <div class="container">
+    <div class="container1">
         <h1>Welcome to the photo space</h1>
+    </div>
+
+        <h2>Photography is simply capturing a moment that spoke to you.</h2>
+    <div class="container2">
+        <div class="card">
+            <img align="left" src="../static/images/banner1.jpg">
+            <p align="right" style="padding-left: 5%;">
+                This photo was taken at dawn, among my shots when I started photography, I was out and suddenly saw the sun hit this building and I simply had to take the moment, I set my ISO at 400, set my focal distance to 55 millimetres, and shutter speed at 1/15 to get the correct exposure, I really loved this photo, and the contrast between the subject and background
+            </p>
+        </div>
+        <div class="card">
+            <img align="left" src="../static/images/banner12.jpg">
+            <p align="right" style="padding-left: 5%;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos nisi voluptate incidunt illo perferendis consequuntur omnis sed magnam nulla soluta! Cupiditate dolore corrupti quam quisquam optio maxime porro eum vel.
+            </p>
+        </div>
+        <div class="card">
+            <img align="left" src="../static/images/ramza2.JPG">
+            <p align="right" style="padding-left: 5%;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos nisi voluptate incidunt illo perferendis consequuntur omnis sed magnam nulla soluta! Cupiditate dolore corrupti quam quisquam optio maxime porro eum vel.
+            </p>
+        </div>
+
+        <!-- <img src="../static/images/banner12.jpg">
+        <img src="../static/images/ramza2.JPG">
+        <img src="../static/images/ramza1.JPG"> -->
     </div>
 {% endblock %}
 

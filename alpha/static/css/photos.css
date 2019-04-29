@@ -1,10 +1,47 @@
-.container{
-    padding: 10%;
-    /* margin-top: 10%; */
+.container1{
     text-align: center;
-    border-radius: 20px;
+    border-radius: 23px;
     background-color: black;
     color: white;
     font-family: 'Courier New', Courier, monospace;
+    margin: 10%;
+    margin-bottom: 30%;
+    padding: 10%;
+
     
+}
+
+.container2{
+    /* background-color: black; */
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    /* margin-top: 20% 0%, 20%, 0%; */
+    padding: 5%;
+}
+
+img{
+    height: 100%;
+    width: 50%;
+    margin-bottom: 5%;
+    border-radius: 10px;
+}
+
+.card{
+    /* background-color: black; */
+    padding: 5% 10% 5% 3%;
+}
+
+p{
+    color: black;
+    text-align: center;
+    padding: 10% 0% 10% 10%;
+    font-size: 110%;
+    /* background-color: aqua; */
+    margin-left: 50%;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Alfa Slab One', cursive;
+
 }
