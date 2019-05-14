@@ -29,6 +29,7 @@ h4{
     background-attachment: fixed;
     text-align: center;
     font-size: 100%;
+    /* filter: blur(1px); */
 }
 
 .container2{
@@ -52,7 +53,7 @@ p{
 .container3{
     margin-top: 10%;
     padding: 20%;
-    background-image: url(../images/banner1.jpg);
+    background-image: url(../images/123.jpg);
     background-position: center;
     background-size: 100%;
     background-attachment: scroll;
@@ -63,7 +64,6 @@ p{
     color: white;
     font-size: 190%;
     margin-bottom: 5%;
-    /* filter: blur(1px); */
 }
 
 .container-fluid{
