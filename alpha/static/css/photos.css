@@ -22,10 +22,21 @@
 }
 
 img{
-    height: 100%;
+    height: auto;
     width: 50%;
+    max-width: 100%;
     margin-bottom: 5%;
     border-radius: 10px;
+
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+img.expanded {
+    max-width: 2000px;
 }
 
 .card{

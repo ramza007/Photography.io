@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{% static 'css/photos.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
 
     {% endblock %}
 </head>
@@ -29,7 +29,7 @@
         <h2>Photography is simply capturing a moment that spoke to you.</h2>
     <div class="container2">
         <div class="card">
-            <img align="left" src="../static/images/banner1.jpg">
+            <a href="../static/images/banner1.jpg"><img align="left" src="../static/images/banner1.jpg"></a>
             <p align="right" style="padding-left: 5%;">
                 <b>Location:</b> Kilimani Estate (Rooftop)
                 <br>
@@ -63,5 +63,28 @@
     {% include 'contact.html' %}
 {% endblock %}
 
+
+{% block scripts %}
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+</script>
+<script type="text/javascript">
+    function toggleExpand() {
+        var expanded = true;
+        $('img').each(function () {
+            if (!$(this).hasClass('expanded')) {
+                expanded = false;
+                return false;
+            }
+        });
+        $('a[href$=".png"], a[href$=".jpg"], a[href$=".gif"], a[href$=".bmp"]').children('img').each(function () {
+            if (expanded)
+                $(this).removeClass('expanded');
+            else
+                $(this).addClass('expanded');
+        });
+    }
+</script>
+{% bootstrap_javascript %} {% endblock %}
 </body>
 </html>
