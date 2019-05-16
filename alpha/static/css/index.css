@@ -51,7 +51,7 @@ p{
 }
 
 .container3{
-    margin-top: 10%;
+    margin-top: 13%;
     padding: 20%;
     background-image: url(../images/123.jpg);
     background-position: center;
@@ -63,7 +63,7 @@ p{
     -o-background-size:cover;
     color: white;
     font-size: 190%;
-    margin-bottom: 5%;
+    margin-bottom: 0.5%;
 }
 
 .container-fluid{
