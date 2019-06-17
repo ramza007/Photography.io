@@ -27,21 +27,20 @@
 
 
 .container-fluid{
-    padding: 5%;
-    background-color: black;
-    text-align: center;
-
+  padding: 5%;
+  background-color: black;
+  text-align: center;
 }
 
 .container-fluid a{
-    font-size: 110%;
-    color: grey;
-    padding: 0% 1% 0% 1%;
-    font-family: 'Rokkitt', serif;
-    /* border-bottom: 1px  solid gray; */
-    text-decoration: none;
-    
-    text-transform: uppercase;
-    text-decoration: none;
-    position: relative;
+  font-size: 110%;
+  color: grey;
+  padding: 0% 1% 0% 1%;
+  font-family: 'Rokkitt', serif;
+  /* border-bottom: 1px  solid gray; */
+  text-decoration: none;
+  
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
 }
