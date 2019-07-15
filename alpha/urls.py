@@ -7,4 +7,6 @@ from . import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('photography', views.photos, name='photos'),
+    path('email', views.email, name='email'),
 ]
+

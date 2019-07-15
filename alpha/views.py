@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.template import RequestContext
+from .models import Editor
 
 # Create your views here.
 def index(request):
@@ -9,3 +10,6 @@ def index(request):
 def photos(request):
     title = "Ramza | Photography"
     return render(request, 'photos.html', {"title": title})
+
+def email(request):
+    return render(request, 'email.html')
