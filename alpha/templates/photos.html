@@ -66,9 +66,17 @@
             </p>
         </div> 
 
-        <!-- <img src="../static/images/banner12.jpg">
-        <img src="../static/images/ramza2.JPG">
-        <img src="../static/images/ramza1.JPG"> -->
+                <div class=" well col-md-6 col-md-offset-1" style="padding:5px; border:2px;">
+                
+                    {% for image in images %}
+                    <div class="col-md-6">
+                        <a href="{% url 'image' image.id %}">
+                            <img src="{{image.photo.url}}" alt="{{Image.image_name}}" class="img-responsive img-thumbnail postImage"
+                                width="80%" height="60%x" style="padding:5px;">
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
     </div>
     {% include 'contact.html' %}
 {% endblock %}

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.template import RequestContext
-from .models import Editor
+from .models import Location, Timeshot, Details, Image
 
 # Create your views here.
 def index(request):
