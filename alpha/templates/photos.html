@@ -66,17 +66,14 @@
             </p>
         </div> 
 
-                <div class=" well col-md-6 col-md-offset-1" style="padding:5px; border:2px;">
+                <!-- <div class=" well col-md-6 col-md-offset-1" style="padding:5px; border:2px;">
                 
-                    {% for image in images %}
                     <div class="col-md-6">
-                        <a href="{% url 'image' image.id %}">
-                            <img src="{{image.photo.url}}" alt="{{Image.image_name}}" class="img-responsive img-thumbnail postImage"
-                                width="80%" height="60%x" style="padding:5px;">
+                        <a href="/">
+                            <img src="{{image.image.url}}" style="height:70%; width:100%; margin-left:0px" class="img-responsive">
                         </a>
                     </div>
-                    {% endfor %}
-                </div>
+                </div> -->
     </div>
     {% include 'contact.html' %}
 {% endblock %}

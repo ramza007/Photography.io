@@ -13,3 +13,4 @@ def photos(request):
 
 def email(request):
     return render(request, 'email.html')
+    
