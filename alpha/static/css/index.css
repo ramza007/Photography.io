@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 h1{
     text-align: center;
     font-size: 300%;
@@ -89,7 +90,7 @@ p{
     margin: 5px 10px 5px 0;
     padding: 10px;
     background-color: white;
-    border: 1px solid gray;
+    border: 1px solid rgb(189, 189, 189);
 }
 
 /* Style the submit button */

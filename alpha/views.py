@@ -9,7 +9,11 @@ def index(request):
 
 def photos(request):
     title = "Ramza | Photography"
-    return render(request, 'photos.html', {"title": title})
+
+    image = []
+    for image in image:
+        image.append(image)
+    return render(request, 'photos.html', {"title": title, "image": image})
 
 def email(request):
     return render(request, 'email.html')

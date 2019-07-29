@@ -66,14 +66,12 @@
             </p>
         </div> 
 
-                <!-- <div class=" well col-md-6 col-md-offset-1" style="padding:5px; border:2px;">
-                
-                    <div class="col-md-6">
-                        <a href="/">
-                            <img src="{{image.image.url}}" style="height:70%; width:100%; margin-left:0px" class="img-responsive">
-                        </a>
-                    </div>
-                </div> -->
+            {% for image in image %}
+            <div class="container>
+                <img src=" {{image.image.url}}">
+                <h3 class="uk-card-title">{{image.image_name}}</h3>
+            </div>
+            {% endfor %}
     </div>
     {% include 'contact.html' %}
 {% endblock %}
