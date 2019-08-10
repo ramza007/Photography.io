@@ -1,6 +1,8 @@
 from django.db import models
 
 # -----------Location Model-----------
+
+
 class Location(models.Model):
     Location = models.CharField(max_length=30)
 
@@ -8,6 +10,7 @@ class Location(models.Model):
         return self.Location
 
 # -----------Timeshot Model-----------
+
 
 class Timeshot(models.Model):
     Timeshot = models.CharField(max_length=30)
@@ -17,13 +20,15 @@ class Timeshot(models.Model):
 
 # -----------Details Model-----------
 
+
 class Details(models.Model):
-    Details = models.CharField(max_length= 200)
+    Details = models.CharField(max_length=200)
 
     def __str__(self):
         return self.Details
 
 # -----------Image Model-----------
+
 
 class Image(models.Model):
     image = models.ImageField(upload_to='photos/', null=True)
