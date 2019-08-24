@@ -55,3 +55,5 @@ class Image(models.Model):
         '''
         images = Image.objects.all()
         return images
+
+        return Image.objects.all()
