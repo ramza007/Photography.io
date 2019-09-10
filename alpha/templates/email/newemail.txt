@@ -1,0 +1,3 @@
+Hello {{name}},
+
+Thank you for you're kind support toward my page, will hope to see more of you in the future. :-)

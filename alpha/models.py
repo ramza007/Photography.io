@@ -57,3 +57,11 @@ class Image(models.Model):
         return images
 
         return Image.objects.all()
+
+
+# -----------Email Model-----------
+
+class NewsletterRecepients(models.Model):
+    name = models.CharField(max_length=30)
+    email = models.EmailField()
+    

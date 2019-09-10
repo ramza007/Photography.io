@@ -24,9 +24,18 @@
     }
 </style>
 <body>
+    {% load bootstrap3 %}
+    <div class="container-fluid">
+
+        <form action="{%url 'email'%}" method="post">
+            {%csrf_token%}
+
+            {% bootstrap_form letterForm layout='inline' %}
+            <input type="submit" value="Subscribe">
+        </form>
+
+    </div>
     <p>
-        This feature will soon be available, thank you for your contribution :)
-        <br><br>
         <a href="/"><p> Go back home </p></a>
     </p>
 </body>
