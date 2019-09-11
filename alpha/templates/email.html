@@ -1,3 +1,6 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap3 %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,38 +8,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ramza | Email Page</title>
+
+    {% block styles %}
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/email.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
+    {% endblock %}
 </head>
-<style>
-    p{
-        padding-top: 10%;
-        font-size: 140%;
-        font-family: 'Times New Roman', Times, serif;
-        text-align: center;
-    }
-    
-    a{
-        text-decoration: none;
-    }
-
-    a:hover{
-        background-color: yellow;
-        transition: 200ms;
-    }
-</style>
 <body>
-    {% load bootstrap3 %}
-    <div class="container-fluid">
-
+{% block content %}
+{% include 'navbar1.html' %}
+<div class="container-email">
+        <h3>
+            One more thing...
+        </h3>
         <form action="{%url 'email'%}" method="post">
             {%csrf_token%}
-
             {% bootstrap_form letterForm layout='inline' %}
-            <input type="submit" value="Subscribe">
+            <input type="submit" value="Sign Up">
         </form>
-
+        <p>
+            * no spam, no bullshit!
+        </p>
     </div>
     <p>
         <a href="/"><p> Go back home </p></a>
     </p>
+{% include 'contact.html' %}
+{% endblock %}
 </body>
 </html>

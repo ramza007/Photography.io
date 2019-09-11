@@ -19,6 +19,7 @@ def photos(request):
     return render(request, 'photos.html', {"title": title, "image": image})
 
 def email(request):
+    title = "Ramza | Email"
     form = NewsLetterForm(request.POST)
     if request.method == 'POST':
         if form.is_valid():
@@ -29,6 +30,6 @@ def email(request):
             recipient.save()
             send_welcome_email(name, email)
 
-            HttpResponseRedirect('index')
+            return HttpResponseRedirect('/')
 
-    return render(request, 'email.html', {"letterForm":form})
+    return render(request, 'email.html', {"title": title, "letterForm":form})
