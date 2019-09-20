@@ -75,7 +75,7 @@
                 <br>
                 <b>Time shot:</b> Midday
                 <br><br>
-                One of the realest people I have ever met, a new concept that I tried, using vegetation and greenary as both for ground and background, and subject as midground.
+                One of the realest people I have ever met, a new concept that I tried, using greenary as both for ground and background, and subject as midground.
             </p>
         </div>
 
@@ -112,8 +112,25 @@
             </div>
             {% endfor %}
     </div>
-    <a name= "contact"></a>
-    {% include 'contact.html' %}
+
+    {% for photos in photos %}
+
+    <div class="row">
+        <!-- displaying photos articles -->
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <h2 class="text-center"> {{ photo.title }} </h2>
+        </div>
+
+        <!--Display photos Article images  -->
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <img src="{{photo.article_image.url}}" class="img-responsive" alt="Image">
+        </div>
+
+    </div>
+    {% endfor %}
+        <a name= "contact"></a>
+        {% include 'contact.html' %}
+
 {% endblock %}
 
 

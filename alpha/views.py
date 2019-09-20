@@ -5,6 +5,7 @@ from .forms import NewsLetterForm
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from .email import send_welcome_email
 
+
 # Create your views here.
 def index(request):
     title = "Ramza Ombati"
@@ -12,11 +13,7 @@ def index(request):
 
 def photos(request):
     title = "Ramza | Photography"
-
-    image = []
-    for image in image:
-        image.append(image)
-    return render(request, 'photos.html', {"title": title, "image": image})
+    return render(request, 'photos.html', {"title": title})
 
 def email(request):
     title = "Ramza | Email"
