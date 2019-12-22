@@ -9,4 +9,5 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('photography', views.photos, name='photos'),
     path('email', views.email, name='email'),
+    path('thank-you', views.thankyou, name='thankyou'),
 ]

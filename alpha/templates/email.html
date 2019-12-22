@@ -39,4 +39,13 @@
 {% include 'contact.html' %}
 {% endblock %}
 </body>
+
+{% block scripts %}
+<!-- <script>
+    function myFunction() {
+        location.href = "{% url 'thankyou' %}"
+    }
+</script> -->
+{% bootstrap_javascript %} {% endblock %}
+
 </html>

@@ -27,6 +27,11 @@ def email(request):
             recipient.save()
             send_welcome_email(name, email)
 
-            return HttpResponseRedirect('/')
+            return HttpResponseRedirect('thank-you')
 
     return render(request, 'email.html', {"title": title, "letterForm":form})
+
+def thankyou(request):
+    title = "Ramza | Thank You"
+    name = email(request)
+    return render(request, 'thank-you.html', {"title": title})
