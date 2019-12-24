@@ -35,3 +35,11 @@ def thankyou(request):
     title = "Ramza | Thank You"
     name = email(request)
     return render(request, 'thank-you.html', {"title": title})
+
+
+def error_404(request, exception):
+    return render(request, 'error_404.html')
+
+
+def error_500(request):
+    return render(request, 'error_500.html')
