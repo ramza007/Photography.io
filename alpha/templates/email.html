@@ -27,14 +27,14 @@
         <form class="form1" action="{%url 'email'%}" method="post" style="text-align: center;">
             {%csrf_token%}
             {% bootstrap_form letterForm layout='inline' %}
-            <button type="submit" class="btn btn-default">Sign Up</button>
+            <button type="submit" class="btn btn-default">Support Me!</button>
         </form>
         <p>
             * no spam, no bullshit!
         </p>
     </div>
     <p>
-        <a href="/"><p> Go back home </p></a>
+        <a href="/"><p> Home </p></a>
     </p>
 {% include 'contact.html' %}
 {% endblock %}
