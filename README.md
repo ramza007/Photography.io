@@ -23,6 +23,6 @@ Started and completed in Python.
 - Django framework (**Ver 3.2**) 
 
 
-#### License under: [***MIT***]https://github.com/ramza007/Photography.io/blob/master/LICENSE)
+#### License under: [***MIT***](https://github.com/ramza007/Photography.io/blob/master/LICENSE)
 
 Copyright (C) 2020 ~ Reseni
