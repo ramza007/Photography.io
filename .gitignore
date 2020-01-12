@@ -8,3 +8,4 @@ start.sh
 migrations/
 .env
 db.sqlite3
+migrations.sh

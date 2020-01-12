@@ -1,6 +1,6 @@
 # Photography Portfolio
 
-### By **Ramza Reseni**, 
+#### By **Ramza Reseni**, 
 #### Published date **01/07/20**
 
 
@@ -10,17 +10,17 @@ Portfolio to showcase my photgraphy skills.
 Started and completed in Python.
 
 
-## Technologies Used
+## Technologies Used --
 
-### Front End
+### Front End:
 - HTML ( **Ver 4** )
 - CSS (**Ver 3**)
 - Bootstrap
-- JavaScript
 
-### Backend
+### Back End:
 - Python (**Ver 3.7**)
 - Django framework (**Ver 3.2**) 
+- JavaScript
 
 
 #### License under: [***MIT***](https://github.com/ramza007/Photography.io/blob/master/LICENSE)
