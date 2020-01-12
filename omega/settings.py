@@ -87,9 +87,9 @@ WSGI_APPLICATION = 'omega.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'portfolio_alpha',
-        'USER': 'ramza',
-        'PASSWORD': 'ramza123',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
     }
 }
 
