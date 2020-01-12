@@ -9,3 +9,4 @@ migrations/
 .env
 db.sqlite3
 migrations.sh
+staticfiles
