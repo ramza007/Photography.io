@@ -12,4 +12,6 @@ urlpatterns = [
     path('photography', views.photos, name='photos'),
     path('email', views.email, name='email'),
     path('thank-you', views.thankyou, name='thankyou'),
+    path('landscapes', views.landscapes, name='landscapes'),
+    path('architecture', views.architecture, name='architecture'),
 ]

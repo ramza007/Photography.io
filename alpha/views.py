@@ -37,6 +37,17 @@ def thankyou(request):
     return render(request, 'thank-you.html', {"title": title})
 
 
+def landscapes(request):
+    title = "Photocase | Landscapes"
+    return render(request, 'photocase/landscapes.html', {"title": title})
+
+def architecture(request):
+    title = "Photocase | Architecture"
+    return render (request, 'photocase/architecture.html', {"title": title})
+
+
+# Error pages
+
 def error_404(request, exception):
     return render(request, 'error_404.html')
 

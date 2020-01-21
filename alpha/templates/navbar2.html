@@ -1,0 +1,31 @@
+{% load bootstrap3 %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/navbar1.css' %}">
+{% endblock %}
+
+<body>
+    <div class="topnav navbar-inverse navbar-fixed-top sticky-top" id="mNavbar">
+        <a class="active" href="/">RAMZA OMBATI</a>
+        <div class="pull-right">
+            <a href="{% url 'architecture' %}">ARCHITECTURE</a>
+            <a href="{% url 'landscapes' %}">LANDSCAPES</a>
+            <a href="#photography">PORTRAITS</a>
+            <a href="https://www.pinterest.com/itsramza/"><i class="fa fa-pinterest fa-lg"
+                    style="font: size 50%;"></i></a>
+            <a href="https://www.instagram.com/ramzaportraits/"><i class="fa fa-instagram fa-lg"
+                    style="font: size 50%;"></i></a>
+            <a href="https://twitter.com/ramzaxx"><i class="fa fa-twitter fa-lg" style="font: size 50%;"></i></a>
+        </div>
+    </div>
+</body>
+
+</html>
