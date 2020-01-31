@@ -59,6 +59,9 @@ class Image(models.Model):
                                 null=True,
                                 blank=True)
 
+    # class Meta:
+    #     ordering = ['-date_uploaded']
+
     def save_image(self):
         '''Method to save an image in the database'''
         self.save()
@@ -81,6 +84,43 @@ class Image(models.Model):
         return images
 
         return Image.objects.all()
+
+
+# -----------Landscape Model-----------
+
+class Landscape(models.Model):
+    image = models.ImageField(upload_to='photos/landscapes', null=True)
+    site = models.CharField(max_length=30)
+    image_description = models.TextField(max_length=300, null=True, blank=True)
+    location = models.CharField(max_length=30,null=True, blank=True)
+    timeshot = models.CharField(max_length=20, null=True,blank=True)
+
+    def save_image(self):
+        '''Method to save an image in the database'''
+        self.save()
+
+    def delete_image(self):
+        ''' Method to delete an image from the database'''
+        self.delete()
+
+    def __str__(self):
+        return self.site
+
+    @classmethod
+    def get_images(cls):
+        '''
+        Method that gets all image posts from the database
+        Returns:
+            images : list of image post objects from the database
+        '''
+        images = Image.objects.all()
+        return images
+
+        return Image.objects.all()
+
+
+# -----------End of Landscape Model-----------
+
 
 
 # -----------Email Model-----------

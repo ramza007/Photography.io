@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.template import RequestContext
-from .models import Location, Timeshot, Details, Image, NewsletterRecepients
+from .models import Location, Timeshot, Details, Image, NewsletterRecepients, Landscape
 from .forms import NewsLetterForm
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from .email import send_welcome_email
@@ -13,8 +13,6 @@ def index(request):
 
 def photos(request):
     title = "Ramza | Photography"
-    # location = Location.objects.all()
-    # time = Timeshot.objects.all()
     content = Image.objects.all()
     return render(request, 'photos.html', {"title": title, "content": content})
 
@@ -42,7 +40,8 @@ def thankyou(request):
 
 def landscapes(request):
     title = "Photocase | Landscapes"
-    return render(request, 'photocase/landscapes.html', {"title": title})
+    landscapes_content = Landscape.objects.all()
+    return render(request, 'photocase/landscapes.html', {"title": title, "landscapes_content": landscapes_content})
 
 def architecture(request):
     title = "Photocase | Architecture"
