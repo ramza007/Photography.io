@@ -108,29 +108,33 @@
             </p>
         </div>
 
-            {% for image in object_list %}
-            <div class="container>
-                <img src=" {{image.image.url}}">
-                <h3 class="uk-card-title">{{image.image_name}}</h3>
-            </div>
-            {% endfor %}
-    </div>
+            <!-- {% for x in content %}
+                <div class="card">
+                        <h2 class="text-center" style="color: black;"> {{ x }} </h2>
+                        <p style="text-align: center; color: black;">{{ x.image_name }}</p>
+                        <p style="text-align: center; color: black;">{{ x.image_caption }}</p>
+                        <img src="{{x.image.url}}" style="height:70%; width:100%; margin-left:0px" class="img-responsive">
 
-    {% for photos in photos %}
+                        <h1 style="color: black; text-align: center;"></h1>
+                    </div>
 
-    <div class="row">
-        <!-- displaying photos articles -->
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-            <h2 class="text-center"> {{ photo.title }} </h2>
+                </div>
+            {% endfor %} -->
+
+        {% for x in content %}    
+        <div class="card">
+            <img align="left" src="{{ x.image.url }}">
+            </a>
+            <p align="right" style="padding-left: 5%;">
+                <b>Muse:</b> {{ x.image_name}}
+                <br>
+                <b>Time shot:</b> {{ x.timeshot }}
+                <br><br>
+                {{ x.image_caption }}
+            </p>
         </div>
-
-        <!--Display photos Article images  -->
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-            <img src="{{photo.article_image.url}}" class="img-responsive" alt="Image">
-        </div>
-
+        {% endfor %}
     </div>
-    {% endfor %}
         <a name= "contact"></a>
         {% include 'contact.html' %}
 

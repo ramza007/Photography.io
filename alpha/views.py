@@ -13,7 +13,10 @@ def index(request):
 
 def photos(request):
     title = "Ramza | Photography"
-    return render(request, 'photos.html', {"title": title})
+    # location = Location.objects.all()
+    # time = Timeshot.objects.all()
+    content = Image.objects.all()
+    return render(request, 'photos.html', {"title": title, "content": content})
 
 def email(request):
     title = "Ramza | Email"
