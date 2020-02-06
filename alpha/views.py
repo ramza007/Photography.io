@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.template import RequestContext
-from .models import Location, Timeshot, Details, Image, NewsletterRecepients, Landscape
+from .models import Location, Timeshot, Details, Portraits, NewsletterRecepients, Landscape, Architecture
 from .forms import NewsLetterForm
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from .email import send_welcome_email
@@ -13,7 +13,7 @@ def index(request):
 
 def photos(request):
     title = "Ramza | Photography"
-    content = Image.objects.all()
+    content = Portraits.objects.all()
     return render(request, 'photos.html', {"title": title, "content": content})
 
 def email(request):
@@ -45,7 +45,8 @@ def landscapes(request):
 
 def architecture(request):
     title = "Photocase | Architecture"
-    return render (request, 'photocase/architecture.html', {"title": title})
+    architecture_content = Architecture.objects.all()
+    return render (request, 'photocase/architecture.html', {"title": title, "architecture_content": architecture_content})
 
 
 # Error pages

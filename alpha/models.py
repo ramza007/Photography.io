@@ -48,7 +48,7 @@ class Details(models.Model):
 # -----------Image Model-----------
 
 
-class Image(models.Model):
+class Portraits(models.Model):
     image = models.ImageField(upload_to='photos/', null=True)
     image_name = models.CharField(max_length=30)
     image_caption = models.TextField(max_length=300, null=True, blank=True)
@@ -121,6 +121,42 @@ class Landscape(models.Model):
 
 # -----------End of Landscape Model-----------
 
+
+# -----------Arcitecture Model-----------
+
+
+class Architecture(models.Model):
+    image = models.ImageField(upload_to='photos/architecture', null=True)
+    name = models.CharField(max_length=30)
+    image_description = models.TextField(max_length=300, null=True, blank=True)
+    location = models.CharField(max_length=30, null=True, blank=True)
+    timeshot = models.CharField(max_length=20, null=True, blank=True)
+
+    def save_image(self):
+        '''Method to save an image in the database'''
+        self.save()
+
+    def delete_image(self):
+        ''' Method to delete an image from the database'''
+        self.delete()
+
+    def __str__(self):
+        return self.name
+
+    @classmethod
+    def get_images(cls):
+        '''
+        Method that gets all image posts from the database
+        Returns:
+            images : list of image post objects from the database
+        '''
+        images = Image.objects.all()
+        return images
+
+        return Image.objects.all()
+
+
+# -----------End of Architecture Model-----------
 
 
 # -----------Email Model-----------

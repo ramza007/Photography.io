@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=pedge">
 
     {% block styles %}
     {% bootstrap_css %}
@@ -32,9 +32,12 @@
     {% include 'navbar2.html' %}
     <a name="photography"></a>
     <div class="cont">
-        <h2>LandScape Shots!</h2>
+        <h2>Landscape Shots...</h2>
 
     </div>
+
+    <!-- Content loop -->
+
     <div class="container2">
         
         {% for x in landscapes_content %}
@@ -51,7 +54,8 @@
         </div>
         {% endfor %}
     </div>
-
+    
+    <!-- End of content loop -->
     <a name="contact"></a>
     {% include 'contact.html' %}
 
