@@ -5,6 +5,7 @@
   color: black;
 }
 
+
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;
@@ -223,5 +224,24 @@
   .main-menu a:focus {
     background: none; /* Remove background from off-canvas styling */
     color: #c00;
+  }
+}
+
+@media(max-width:800px) {
+  .topnav{
+    color: black;
+  }
+  .topnav #myTopnav{
+    display: none;
+    text-align: left;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    /* z-index: 1; */
+  }
+}
+
+@media(min-width: 800px) {
+  .icon{
+    display: none;
   }
 }

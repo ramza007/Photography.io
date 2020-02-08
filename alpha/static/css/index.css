@@ -48,7 +48,7 @@ img{
 p{
     padding-top: 2%;
     font-family: 'Rokkitt', serif;
-    font-size: 115%;   
+    font-size: 115%; 
 }
 
 .container3{
@@ -71,10 +71,6 @@ p{
     padding: 2% 10% 20% 10%;
     background-color: black;
     text-align: center;
-}
-
-@viewport {
-  width: device-width;
 }
 
 .form-inline{
@@ -108,7 +104,7 @@ p{
 }
 
 /* Add responsiveness - display*/
-@media (max-width: 800px) {
+/* @media (max-width: 800px) {
   .form-inline input {
     margin: 10px 0;
   }
@@ -117,4 +113,56 @@ p{
     flex-direction: column;
     align-items: stretch;
   }
+} */
+
+
+@media (max-width: 480px) {
+    body {
+        background-color: black;
+        color: white;
+        margin-bottom: 5%;
+    }
+
+    .container2 {
+        /* text-align: center;  */
+        /* background-color: chartreuse; */
+        /* margin: 50%; */
+        overflow: auto;
+        width: 100%;
+        
+        
+    }
+    
+    .container2 p{
+        /* width: 100%; */
+        font-size: 155%;
+        /* background-color: violet; */
+        /* padding: 15%; */
+        /* margin-top: 60vw; */
+
+    }
+    
+    .container2 img{
+        vertical-align: text-bottom;
+        /* display: none; */
+        width: 100%;
+        margin-bottom: 10vw;
+    }
+    .container2 h2 {
+        color: white;
+        
+    }
+    .form-inline{
+        padding: 5% 12% 0% 0%;
+        font-family: 'Rokkitt', serif;
+        font-size: 115%;
+        /* margin-left: 10%; */
+        text-align: center;
+    }
 }
+
+@media (min-width:768px) { }
+@media (min-width:1024px) { }
+@media (min-width:1280px) { }
+@media (min-width:1300px) { }
+@media (min-width:1600px) { }

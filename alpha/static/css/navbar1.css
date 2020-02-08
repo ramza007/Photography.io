@@ -22,3 +22,11 @@
   /* background-color: #ddd; */
   color: grey;
 }
+
+/* @media(max-width:850px) {
+  .topnav {
+    width: 100%;
+    background-color: blueviolet;
+  }
+
+} */

@@ -78,3 +78,28 @@ p{
     text-align: center;
     font-family: 'Alfa Slab One', cursive;
 }
+
+
+@media(max-width:850px) {
+  .container1 {
+    margin-top: 50vw;
+  }
+
+  .container2{
+      /* background-color: blueviolet; */
+      font-size: large;
+  }
+
+  .container2 img{
+      width: 100vw;
+  }
+
+  .container2 p{
+      /* background-color: brown; */
+      width: 100%;
+      margin-top: 80vw;
+      /* padding: 0%; */
+      margin: 0%;
+      font-size: 120%;
+  }
+}
