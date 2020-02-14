@@ -32,8 +32,12 @@ SECRET_KEY = '#713x&$744+lnvw7@$xengk8y0z9p%wv-1l17vf!^xk8tg=2z&'
 # ALLOWED_HOSTS = []
 
 # For testing purposes
+# DEBUG = False
+# ALLOWED_HOSTS = ["*"]
+
+for production
 DEBUG = False
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['photography-io.herokuapp.com']
 
 # Application definition
 
