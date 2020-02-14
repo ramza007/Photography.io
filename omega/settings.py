@@ -36,8 +36,8 @@ ALLOWED_HOSTS = []
 # ALLOWED_HOSTS = ['*']
 
 # for production
-# DEBUG = False
-# ALLOWED_HOSTS = ['photography-io.herokuapp.com']
+DEBUG = False
+ALLOWED_HOSTS = ['photography-io.herokuapp.com']
 
 # Application definition
 
