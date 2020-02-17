@@ -11,12 +11,12 @@
 }
 
 @media (max-width: 480px) {
-    body{
+    /* body{
         padding-bottom: 2vw;
-    }
+    } */
     .container{
-        background-color: brown;
         margin-top: 60vw;
         padding: 2vw;
+        padding-bottom: 20vw;
     }
 }
