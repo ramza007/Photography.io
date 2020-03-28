@@ -1,6 +1,7 @@
 import django_heroku
 from decouple import config
 from django.conf import settings
+import dj_database_url
 
 """
 Django settings for omega project.
@@ -28,16 +29,16 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '#713x&$744+lnvw7@$xengk8y0z9p%wv-1l17vf!^xk8tg=2z&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-# ALLOWED_HOSTS = []
+DEBUG = True
+ALLOWED_HOSTS = []
 
-# For testing purposes
+# For testing purposes 
 # DEBUG = False
 # ALLOWED_HOSTS = ['*']
 
 # for production
-DEBUG = False
-ALLOWED_HOSTS = ['photography-io.herokuapp.com']
+# DEBUG = False
+# ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'photography-io.herokuapp.com']
 
 # Application definition
 
@@ -48,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'bootstrap3',
 ]
@@ -140,8 +142,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
+
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 EMAIL_USE_TLS = config('EMAIL_USE_TLS')
 EMAIL_HOST = config('EMAIL_HOST')

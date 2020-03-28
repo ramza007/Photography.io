@@ -1,14 +1,24 @@
 .container1{
-    text-align: center;
+    /* text-align: center; */
     /* border-radius: 23px; */
     background-color: white;
     color: black;
     font-family: 'Courier New', Courier, monospace;
-    margin: 15% 10% 10% 10%;
+    margin: 13% 10% 10% 10%;
     margin-bottom: 30%;
-    padding: 10%;
+    padding: 1% 10% 15% 1%;
 }
 
+.container1 h1{
+    font-size: 210%;
+}
+
+
+.container1 h3{
+    /* text-align: left; */
+    padding: 3% 0% 0% 6%;
+    /* font-size: 110%; */
+} 
 .container2{
     /* background-color: black; */
     color: white;
