@@ -33,12 +33,12 @@ SECRET_KEY = '#713x&$744+lnvw7@$xengk8y0z9p%wv-1l17vf!^xk8tg=2z&'
 # ALLOWED_HOSTS = []
 
 # For testing purposes 
-# DEBUG = False
-# ALLOWED_HOSTS = ['*']
+DEBUG = False
+ALLOWED_HOSTS = ['*']
 
 # for production
-DEBUG = False
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'photography-io.herokuapp.com']
+# DEBUG = False
+# ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'photography-io.herokuapp.com']
 
 # Application definition
 
@@ -55,7 +55,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    # 'django.middleware.security.SecurityMiddleware',
+    'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -144,7 +144,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 EMAIL_USE_TLS = config('EMAIL_USE_TLS')
 EMAIL_HOST = config('EMAIL_HOST')
