@@ -10,3 +10,6 @@ migrations/
 db.sqlite3
 migrations.sh
 staticfiles
+deployment.sh
+launch.sh
+setup.sh
