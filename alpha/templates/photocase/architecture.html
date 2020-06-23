@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap3 %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    {% block styles %}
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/architecture.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
+
+    {% endblock %}
+</head>
+
+<body>
+    {% block content %}
+    <div class="container1">
+        <h1><b>Architectural Photography</b><br><br> /ärkiˈtekCHərəl/ /fəˈtäɡrəfē/</h1>
+            <h3>
+                The photographing of buildings and similar structures that are both aesthetically pleasing and accurate representations of their subjects
+            </h3>
+    </div>
+
+    {% include 'navbar2.html' %}
+    <a name="photography"></a>
+    <div class="cont">
+        <h2>Architecture photos</h2>
+
+    </div>
+    <div class="container2">
+
+        {% for x in architecture_content %}
+            <div class="card">
+                <img align='left' src="{{ x.image.url }}">
+                <p align="right" style="padding-left: 5%;">
+                    <b>Location:</b> {{ x.location }}
+                    <br>
+                    <b>Time shot:</b> {{ x.timeshot }}
+                    <br><br>
+                    {{ x.image_description }}
+                </p>
+            </div>
+        {% endfor %}
+    </div>
+
+    <a name="contact"></a>
+    {% include 'contact.html' %}
+
+    {% endblock %}
+
+
+    {% block scripts %}
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+        </script>
+    <script type="text/javascript">
+        function toggleExpand() {
+            var expanded = true;
+            $('img').each(function () {
+                if (!$(this).hasClass('expanded')) {
+                    expanded = false;
+                    return false;
+                }
+            });
+            $('a[href$=".png"], a[href$=".jpg"], a[href$=".gif"], a[href$=".bmp"]').children('img').each(function () {
+                if (expanded)
+                    $(this).removeClass('expanded');
+                else
+                    $(this).addClass('expanded');
+            });
+        }
+    </script>
+    {% bootstrap_javascript %} {% endblock %}
+</body>
+
+</html>

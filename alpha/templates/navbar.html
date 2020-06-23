@@ -11,7 +11,7 @@
 
 <div class="topnav">
     <a href="/">RAMZA OMBATI</a>
-    <div class="topnav" id="myTopnav">
+    <div id="myTopnav">
     <ul class="nav navbar-nav navbar-right">
         <a href="#about">ABOUT</a>
         <a href="{% url 'photos' %}">PHOTOGRAPHY</a>
@@ -19,22 +19,24 @@
         <a href="https://www.pinterest.com/itsramza/"><i class="fa fa-pinterest fa-lg" style="font: size 50%;"></i></a>
         <a href="https://www.instagram.com/ramzaportraits/"><i class="fa fa-instagram fa-lg" style="font: size 50%;"></i></a>
         <a href="https://twitter.com/ramzaxx"><i class="fa fa-twitter fa-lg" style="font: size 50%;"></i></a>
-        <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <span class="fa fa-bars" aria-hidden="true"></span> -->
-        </a>
     </ul>
-    </div>
+    
+</div>
+<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+</a>
+
 </div>
 </nav>
 {% block script %}
     <script>
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
         }
+    }
     </script>
 {% endblock %}

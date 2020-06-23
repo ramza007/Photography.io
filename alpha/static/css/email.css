@@ -27,8 +27,6 @@ h3 {
 
 }
 
-
-
 /* come back and fix this  */
 
 /* .conatiner-email a:hover {
@@ -51,4 +49,12 @@ h3 {
     transition: 350ms;
 }
 
-/* Add r
+@media (max-width: 480px) {
+    body{
+        padding-bottom: 2vw;
+    }
+    .container-email{
+        margin-top: 50vw;
+        padding: 2vw;
+    }
+}

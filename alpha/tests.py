@@ -1,26 +1,73 @@
 from django.test import TestCase
+from .models import Location, Timeshot, Details, Image
 
 # Create your tests here.
 
+# <--------------- Location Test class --------------->
 
-class ArticleTestClass(TestCase):
+class LocationTestClass(TestCase):
 
+    # Setting up method
     def setUp(self):
-        # Creating a new editor and saving it
-        self.james = Editor(
-            first_name='James', last_name='Muriuki', email='james@moringaschool.com')
-        self.james.save_editor()
+        self.kilimani = Location(Location = 'Kilimani')
 
-        # Creating a new tag and saving it
-        self.new_tag = tags(name='testing')
-        self.new_tag.save()
-        self.new_article = Article(
-            title='Test Article', post='This is a random test Post', editor=self.james)
-        self.new_article.save()
+# Testing instance
+    def test_instance(self):
+        self.assertTrue(isinstance(self.kilimani, Location))
 
-        self.new_article.tags.add(self.new_tag)
+# Testing save method
+    def test_save_inatsnce(self):
+        self.kilimani.save_editor()
+        location = Location.objects.all()
+        self.assertTrue(len(location)>0)
+
+    def test_get_location(self):
+        location_taken = Location.location_taken()
 
     def tearDown(self):
-        Editor.objects.all().delete()
-        tags.objects.all().delete()
-        Article.objects.all().delete()
+        Location.objects.all().delete()
+
+# <--------------- End Location Test class --------------->
+
+
+# <--------------- TimeShot Test class --------------->
+class TimeshotTestClass(TestCase):
+    def setUp(self):
+        self.evening = Timeshot(Timeshot = 'Evening')
+
+# Test the instance
+    def test_instance(self):
+        self.assertTrue(isinstance(self.evening, Timeshot))
+
+# Testing the method
+    def test_save_instance(self):
+        self.evening.save_editor()
+        timeshot = Timeshot.objects.all()
+        self.assertTrue(len(timeshot)>0)
+
+    def tearDown(self):
+        Timeshot.objects.all().delete()
+# <--------------- End Timeshot Test class --------------->
+
+
+# <--------------- Details Test class --------------->
+class DetailsTestCase(TestCase):
+    def setUp(self):
+        self.hello = Details(Details = 'Hello')
+
+# Testing the instance
+    def test_instance(self):
+        self.assertTrue(isinstance(self.hello, Details))
+
+# Testing the method
+    def test_save_inatsnce(self):
+        self.hello.save_editor()
+        details = Details.objects.all()
+        self.assertTrue(len(details)>0)
+
+    def tearDown(self):
+        Details.objects.all().delete()
+
+# <--------------- End details Test class --------------->
+
+# <--------------- Image Test class --------------->

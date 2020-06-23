@@ -24,115 +24,31 @@
         <h1>Welcome to the photo space...</h1>
     </div>
 
-    {% include 'navbar1.html' %}
+    {% include 'navbar2.html' %}
     <a name="photography"></a>
     <div class="cont">
         <h2>Capture moments that speak to you !</h2>
 
     </div>
     <div class="container2">
+
+        {% for x in content %}    
         <div class="card">
-            <a href="../static/images/banner1.jpg">
-                <img align="left" src="../static/images/banner1.jpg">
+            <img align="left" src="{{ x.image.url }}" class="img-responsive" alt="Image">
             </a>
             <p align="right" style="padding-left: 5%;">
-                <b>Location:</b> Kilimani Estate (Rooftop)
+                <b>Muse:</b> {{ x.image_name}}
                 <br>
-                <b>Time shot:</b> Dusk
+                <b>Time shot:</b> {{ x.timeshot }}
                 <br><br>
-                Among my shots when I started photography,the way the sun hit this building was simply breathtaking. I set my ISO at 400, set my focal distance to 55 millimetres, and shutter speed at 1/15 to get the correct exposure,focus was on the contrast between the subject and background
+                {{ x.image_caption }}
             </p>
         </div>
-        <div class="card">
-            <a href="../static/images/banner12.jpg">
-                <img align="left" src="../static/images/banner12.jpg">
-            </a>
-            <p align="right" style="padding-left: 5%;">
-                <b>Location:</b> KICC (Rooftop)
-                <br>
-                <b>Time shot:</b> Midday
-                <br><br>
-                Along my expeditions within the city I visited the monumental Kenya International Conference Centre (KICC), shot from the south
-                east side of the building overlooking uptown, centre piece was Nation media building
-            </p>
-        </div>
-        <div class="card">
-            <a href="../static/images/muse0.jpg">
-                <img align="left" src="../static/images/muse0.jpg">
-            </a>
-            <p align="right" style="padding-left: 5%;">
-                <b>Muse:</b> Kavala
-                <br>
-                <b>Time shot:</b> Midday
-                <br><br>
-                This would be among my favourite portraits from one of the kindest souls I have known, from my point of view this photo speaks volumes and has so much happening in the background but has a strong forground.
-            </p>
-        </div> 
-
-        <div class="card">
-            <a href="../static/images/ben_1.jpg">
-                <img align="left" src="../static/images/ben_1.jpg">
-            </a>
-            <p align="right" style="padding-left: 5%;">
-                <b>Muse:</b> Benson
-                <br>
-                <b>Time shot:</b> Midday
-                <br><br>
-                One of the realest people I have ever met, a new concept that I tried, using greenary as both for ground and background, and subject as midground.
-            </p>
-        </div>
-
-
-        <div class="card">
-                <img align="left" src="../static/images/ben_ngong.jpg">
-            </a>
-            <p align="right" style="padding-left: 5%;">
-                <b>Muse:</b> Benson
-                <br>
-                <b>Time shot:</b> Evening
-                <br><br>
-                An expedition to Ngong Hills, background is a door and stairs to one of the wind turbines, focus was on the foreground, and how the clouds reflected on the sunglasses with perfect harmony, a cool vybe to the photo.
-            </p>
-        </div>
-
-
-        <div class="card">
-                <img align="left" src="../static/images/mbugua_1.jpg">
-            </a>
-            <p align="right" style="padding-left: 5%;">
-                <b>Muse:</b> Mbugua
-                <br>
-                <b>Time shot:</b> Midday
-                <br><br>
-                Location was at K1 Klubhouse, a new concept I tried with the balancing of light and dark, notice the mixture of colour in the photo.
-            </p>
-        </div>
-
-            {% for image in object_list %}
-            <div class="container>
-                <img src=" {{image.image.url}}">
-                <h3 class="uk-card-title">{{image.image_name}}</h3>
-            </div>
-            {% endfor %}
+        {% endfor %}
     </div>
-
-    {% for photos in photos %}
-
-    <div class="row">
-        <!-- displaying photos articles -->
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-            <h2 class="text-center"> {{ photo.title }} </h2>
-        </div>
-
-        <!--Display photos Article images  -->
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-            <img src="{{photo.article_image.url}}" class="img-responsive" alt="Image">
-        </div>
-
-    </div>
-    {% endfor %}
-        <a name= "contact"></a>
-        {% include 'contact.html' %}
+    
+    <a name= "contact"></a>
+    {% include 'contact.html' %}
 
 {% endblock %}
 

@@ -8,5 +8,15 @@ start.sh
 migrations/
 .env
 db.sqlite3
-staticfiles
+._.*
+
+# variable files
+
+launch.sh
+setup.sh
 migrations.sh
+deployment.sh
+
+# end of text
+
+staticfiles
