@@ -16,3 +16,12 @@
     text-decoration: none;
     font-size: large;
 }
+
+@media (max-width: 480px) {
+
+    .container{
+        margin-top: 50vw;
+        padding: 2vw;
+        margin-bottom: 80vw;
+    }
+}

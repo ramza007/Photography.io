@@ -12,7 +12,7 @@ def index(request):
     return render(request, 'index.html', {"title": title})
 
 def photos(request):
-    title = "Ramza | Photography"
+    title = "Ramza | Portaits"
     content = Portraits.objects.all()
     return render(request, 'photos.html', {"title": title, "content": content})
 

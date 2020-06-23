@@ -124,6 +124,16 @@ p{
         margin-bottom: 5%;
     }
 
+    .container1{
+        background-image: url(../images/ramzavertical.jpg);
+        background-size: cover;
+        padding-bottom: 100vw;
+    }
+
+    .container1 h1 {
+        padding-top: 80vw;
+        text-align: center;
+    }
     .container2 {
         /* text-align: center;  */
         /* background-color: chartreuse; */

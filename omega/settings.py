@@ -1,6 +1,7 @@
 import django_heroku
 from decouple import config
 from django.conf import settings
+import dj_database_url
 
 """
 Django settings for omega project.
@@ -31,25 +32,30 @@ SECRET_KEY = '#713x&$744+lnvw7@$xengk8y0z9p%wv-1l17vf!^xk8tg=2z&'
 DEBUG = True
 ALLOWED_HOSTS = []
 
-# For testing purposes
+# For testing purposes 
 # DEBUG = False
-# ALLOWED_HOSTS = ["*"]
+# ALLOWED_HOSTS = ['*']
+
+# for production
+# DEBUG = False
+# ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'photography-io.herokuapp.com']
 
 # Application definition
 
 INSTALLED_APPS = [
+    'alpha.apps.AlphaConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'bootstrap3',
-    'alpha',
 ]
 
 MIDDLEWARE = [
-    # 'django.middleware.security.SecurityMiddleware',
+    'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -134,6 +140,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 
 MEDIA_URL = '/media/'
