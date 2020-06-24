@@ -13,6 +13,7 @@
     {% block styles %}
     {% bootstrap_css %}
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="shortcut icon" href="{% static '/images/R-LOGO.png' %}">
     <!-- font styles -->
         <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
@@ -23,7 +24,7 @@
 
 </head>
 <body>
-{% block content %}
+{% block content %} {{block.super}}
 {% include 'navbar.html' %}
 <div class="container1">
         <h1 style="font-family: 'Alfa Slab One', cursive;">WELCOME TO MY WORLD</h1>
