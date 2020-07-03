@@ -116,7 +116,7 @@ p{
   }
 } */
 
-
+/* small screens */
 @media (max-width: 480px) {
     body {
         background-color: black;
@@ -169,6 +169,15 @@ p{
         font-size: 115%;
         /* margin-left: 10%; */
         text-align: center;
+    }
+
+    .form-inline input {
+        /* vertical-align: middle; */
+        /* margin: 5px 10px 5px 0; */
+        /* padding: 10px; */
+        background-color: white;
+        color: black;
+        border: 1px solid rgb(189, 189, 189);
     }
 }
 
