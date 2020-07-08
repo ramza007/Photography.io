@@ -58,3 +58,21 @@ h3 {
         padding: 2vw;
     }
 }
+
+@media(max-width:850px) {
+    .container-email{
+        padding-bottom: 10vh;
+    }
+
+    .container-email h3{
+        text-align: center;
+    }
+
+    .form1{
+        padding: 0 2vw 0 2vw;
+    }
+
+    p{
+        margin-right: 2vw;
+    }
+}

@@ -82,7 +82,8 @@ p{
 
 @media(max-width:850px) {
   .container1 {
-    margin-top: 50vw;
+    margin-top: 20vw;
+    margin-bottom: 40vh;
   }
 
   .container2{

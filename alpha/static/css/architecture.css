@@ -82,24 +82,25 @@ p{
 
 @media(max-width:850px) {
   .container1 {
-    margin-top: 50vw;
+    margin-top: 10vh;
+    margin-bottom: 40vw;
   }
 
   .container2{
-      /* background-color: blueviolet; */
-      font-size: large;
+    /* background-color: blueviolet; */
+    font-size: large;
   }
 
   .container2 img{
-      width: 100vw;
+    width: 100vw;
   }
 
   .container2 p{
-      /* background-color: brown; */
-      width: 100%;
-      margin-top: 80vw;
-      /* padding: 0%; */
-      margin: 0%;
-      font-size: 120%;
+    /* background-color: brown; */
+    width: 100%;
+    margin-top: 80vw;
+    /* padding: 0%; */
+    margin: 0%;
+    font-size: 120%;
   }
 }

@@ -71,13 +71,15 @@ p{
 
 
 /* Media Queries */
+
+
 @media(max-width:850px) {
   .container1 {
     margin-top: 50vw;
-    padding: 10vw 0 10vw 0;
-  }
+    padding: 20vw 0 65vw 0;
+}
 
-  .container2{
+.container2{
       /* background-color: blueviolet; */
       font-size: large;
   }
