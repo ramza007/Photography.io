@@ -53,7 +53,7 @@
         <form class="form-inline" action="{%url 'email'%}" method="post" style="float:right;">
             {%csrf_token%}
             <p>Sign up to stay updated and support me  :) </p>
-            <input type="email" id="email" placeholder="Email Address" name="email">
+            <input type="email" id="email" placeholder="Email Address" name="email" required>
             <button type="submit" style="color: black;">Sign Up</button>
         </form>
 </div>
