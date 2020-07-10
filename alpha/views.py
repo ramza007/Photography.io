@@ -26,7 +26,7 @@ def email(request):
 
             recipient = NewsletterRecepients(name=name, email=email)
             recipient.save()
-            send_welcome_email(name, email)
+            # send_welcome_email(name, email)
 
             return HttpResponseRedirect('thank-you')
 

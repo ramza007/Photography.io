@@ -126,7 +126,7 @@ p{
 
     .container1{
         background-image: url(../images/ramzavertical.jpg);
-        background-size: cover;
+        background-size: 110%;
         padding-bottom: 100vw;
     }
 
