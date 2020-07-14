@@ -64,22 +64,12 @@ p{
     margin-left: 50%;
 }
 
-
-/* .cont{
-    position: sticky;
-    top: 0px;
-    background-color: white;
-    padding: 3% 0% 0.01% 0%;
-    margin: 0% 26% 0% 26%;
-    border-radius: 10px;
-} */
-
 .cont h2{
     text-align: center;
     font-family: 'Alfa Slab One', cursive;
 }
 
-
+/* Begining of media queries */
 @media(max-width:850px) {
   .container1 {
     margin-top: 10vh;
@@ -89,10 +79,12 @@ p{
   .container2{
     /* background-color: blueviolet; */
     font-size: large;
+    padding: 2%;
   }
 
   .container2 img{
-    width: 100vw;
+    width: 110vw;
+    border-radius: 7px;
   }
 
   .container2 p{

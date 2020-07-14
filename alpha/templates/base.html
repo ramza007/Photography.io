@@ -17,6 +17,7 @@
     <!-- end of links -->
 
     <meta charset="utf-8">
+    <link rel="shortcut icon" href="{% static '/images/R-LOGO.png' %}">
     {% block styles %}
     {% bootstrap_css %}
         <meta charset="UTF-8">
@@ -24,7 +25,6 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
         <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
-        <link rel="shortcut icon" href="{% static '/images/R-LOGO.png' %}">
     {% endblock %}
 
 </head>
@@ -33,6 +33,19 @@
     <style>
         @viewport {width: device-width; }  
         html { scroll-behavior: smooth; }  
+
+        body::-webkit-scrollbar {
+            width: 0.45rem;
+        }
+
+        body::-webkit-scrollbar-track {
+            background: white;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background: grey;
+        }
+
     </style>
     {% block content %} {% endblock %}
 </body>
