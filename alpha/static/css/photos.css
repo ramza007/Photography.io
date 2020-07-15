@@ -21,6 +21,17 @@
 
 }
 
+p{
+    color: black;
+    text-align: left;
+    padding: 10% 0% 10% 10%;
+    /* font-size: 110%; */
+    font-size: 130%;
+    /* background-color: aqua; */
+    margin-left: 50%;
+}
+
+
 img{
     height: auto;
     width: 50%;
@@ -45,14 +56,6 @@ img{
     padding: 4vw;
 }
 
-p{
-    color: black;
-    text-align: left;
-    padding: 10% 0% 10% 10%;
-    font-size: 110%;
-    /* background-color: aqua; */
-    margin-left: 50%;
-}
 
 
 .cont h2{
