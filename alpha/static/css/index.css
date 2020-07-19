@@ -5,12 +5,6 @@ html {
 body{
     overflow: auto;
 }
-h1{
-    text-align: center;
-    font-size: 300%;
-    color: white;
-    opacity: 0.9;
-}
 
 h2{
     text-align: center;
@@ -19,24 +13,30 @@ h2{
     opacity: 0.9;
 }
 
-h4{
+.container1{
+    background-image: url(../images/ramza3.jpg);
+    background-size: 100%;
+    padding: 45vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    font-size: 100%;
+}
+
+.container1 h1{
+    text-align: center;
+    font-size: 300%;
+    color: white;
+    opacity: 0.9;
+}
+
+
+.container1 h4{
     color: white;
     font-family: 'Rokkitt', serif;
     padding-top: 1%;
 }
 
-.container1{
-    background-image: url(../images/ramza3.jpg);
-    background-size: 100%;
-    /* padding: 27vw; */
-    padding: 45vh;
-    /* padding-bottom: 50vh; */
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    text-align: center;
-    font-size: 100%;
-    /* filter: blur(1px); */
-}
 
 .container2{
     padding: 8% 15% 10% 15%;
