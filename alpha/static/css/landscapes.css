@@ -56,6 +56,7 @@ img{
     font-family: 'Alfa Slab One', cursive;
 }
 
+/* Begining of media queries */
 
 @media(max-width:850px) {
   .container1 {
@@ -77,5 +78,14 @@ img{
       margin-top: 80vw;
       margin: 0%;
       font-size: 120%;
+  }
+}
+
+/* ipads */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  {
+  .container1{
+    height: 70vh;
   }
 }

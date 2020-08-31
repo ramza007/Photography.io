@@ -195,6 +195,83 @@ p{
     }
 }
 
+
+/* ipads */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  {
+ body {
+        /* background-color: black; */
+        /* color: white; */
+        margin-bottom: 5%;
+        font-size: large;
+    }
+
+    .container1{
+        background-image: url(../images/ramzavertical.jpg);
+        background-size: 80vh;
+        padding-bottom: 20vh;
+        padding: 27vw;
+        background-attachment: fixed;
+    }
+
+    .container1 h1 {
+        padding-top: 45vh;
+        text-align: center;
+        font-size: 6vw;
+    }
+    .container2 {
+        padding: 10vw;
+        padding-bottom: 0;
+        overflow: auto;
+        width: 100%;
+        font-size: 2vw;
+    }
+    
+    .container2 p{
+        /* width: 100%; */
+        font-size: 155%;
+        /* background-color: violet; */
+        /* padding: 15%; */
+        /* margin-top: 60vw; */
+
+    }
+    
+    .container2 img{
+        vertical-align: text-bottom;
+        /* display: none; */
+        width: 100%;
+        margin-bottom: 10vw;
+        padding: 0;
+        border-radius: 5px;
+    }
+    .container2 h2 {
+        color: black;
+        
+    }
+    .form-inline{
+        /* padding: 0; */
+        font-family: 'Rokkitt', serif;
+        font-size: 115%;
+        text-align: center;
+        /* background-color: blue; */
+    }
+
+    .form-inline input {
+        background-color: white;
+        font-size: larger;
+        color: black;
+        border: 1px solid rgb(189, 189, 189);
+    }
+
+    .form-inline p{
+        padding: 9vh 0 2vh 0;
+    }
+}
+
+
+
+
 @media (min-width:768px) { }
 @media (min-width:1024px) { }
 @media (min-width:1280px) { }

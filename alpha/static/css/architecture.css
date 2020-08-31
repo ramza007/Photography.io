@@ -73,6 +73,7 @@ img{
 }
 
 /* Begining of media queries */
+
 @media(max-width:850px) {
   .container1 {
     margin-top: 10vh;
@@ -97,5 +98,14 @@ img{
     /* padding: 0%; */
     margin: 0%;
     font-size: 120%;
+  }
+}
+
+/* ipads */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  {
+  .container1{
+    height: 70vh;
   }
 }
