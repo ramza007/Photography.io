@@ -201,9 +201,6 @@ p{
 and (min-device-width : 768px) 
 and (max-device-width : 1024px)  {
  body {
-        /* background-color: black; */
-        /* color: white; */
-        margin-bottom: 5%;
         font-size: medium;
     }
 
@@ -229,12 +226,7 @@ and (max-device-width : 1024px)  {
     }
     
     .container2 p{
-        /* width: 100%; */
         font-size: 155%;
-        /* background-color: violet; */
-        /* padding: 15%; */
-        /* margin-top: 60vw; */
-
     }
     
     .container2 img{
@@ -250,11 +242,9 @@ and (max-device-width : 1024px)  {
         
     }
     .form-inline{
-        /* padding: 0; */
         font-family: 'Rokkitt', serif;
         font-size: 115%;
         text-align: center;
-        /* background-color: blue; */
     }
 
     .form-inline input {
@@ -265,7 +255,7 @@ and (max-device-width : 1024px)  {
     }
 
     .form-inline p{
-        padding: 9vh 0 2vh 0;
+        padding: 4vh 0 2vh 0;
     }
 }
 
