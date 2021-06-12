@@ -115,7 +115,9 @@ p{
 
 
 /* small screens */
-@media (max-width: 480px) {
+@media only screen
+and (min-device-width: 480px)
+and (max-device-width : 767px)  {
     body {
         background-color: black;
         color: white;
@@ -178,16 +180,17 @@ p{
 
 /* ipads */
 @media only screen 
-and (min-device-width : 768px) 
+and (min-device-width : 801px) 
 and (max-device-width : 1024px)  {
  body {
         font-size: medium;
     }
 
     .container1{
-        background-image: url(../images/ramzavertical.jpg);
-        background-size: 80vh;
-        padding-bottom: 20vh;
+        /* background-image: url(../images/P1030814.JPG); */
+        /* background-size: 80vh; */
+        /* padding-bottom: 20vh; */
+        background-color: aqua;
         padding: 27vw;
         background-attachment: fixed;
     }
