@@ -49,7 +49,7 @@ class Details(models.Model):
 
 
 class Portraits(models.Model):
-    image = models.ImageField(upload_to='photos/', null=True)
+    image = models.ImageField(upload_to='photos/portraits', null=True)
     image_name = models.CharField(max_length=30)
     image_caption = models.TextField(max_length=300, null=True, blank=True)
     location = models.CharField(max_length=30,
