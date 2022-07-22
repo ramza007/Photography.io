@@ -1,6 +1,6 @@
 # Photography Portfolio
 
-#### By **Ramza Reseni**, 
+#### By **Ramsa Ombati**, 
 #### Published date **01/07/20**
 
 
