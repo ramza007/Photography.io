@@ -1,7 +1,7 @@
 """
 App urls
 """
-from django.conf.urls import url, handler404, handler500
+# from django.conf.urls import url, handler404, handler500
 from django.urls import path, include
 from . import views
 
