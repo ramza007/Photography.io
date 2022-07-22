@@ -8,16 +8,16 @@ from .email import send_welcome_email
 
 # Create your views here.
 def index(request):
-    title = "Ramza Ombati"
+    title = "Ramsa Ombati"
     return render(request, 'index.html', {"title": title})
 
 def photos(request):
-    title = "Ramza | Portaits"
+    title = "Ramsa | Portaits"
     content = Portraits.objects.all()
     return render(request, 'photos.html', {"title": title, "content": content})
 
 def email(request):
-    title = "Ramza | Email"
+    title = "Ramsa | Email"
     form = NewsLetterForm(request.POST)
     if request.method == 'POST':
         if form.is_valid():
@@ -33,7 +33,7 @@ def email(request):
     return render(request, 'email.html', {"title": title, "letterForm":form})
 
 def thankyou(request):
-    title = "Ramza | Thank You"
+    title = "Ramsa | Thank You"
     name = email(request)
     return render(request, 'thank-you.html', {"title": title})
 
