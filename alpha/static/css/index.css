@@ -13,30 +13,32 @@ h2{
     opacity: 0.9;
 }
 
+/*,,,,,,,,,,,,,,,, CONTAINER 1 ,,,,,,,,,,,,,,,,*/
+
 .container1{
-    background-image: url(../images/RO-001-20.jpg);
+    background-image: url(../images/RO-001-20.jpeg);
     background-size: 100%;
     padding: 45vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
     text-align: right;
+    font-size: 100%;
+    color: white;
 }
 
-.container1 h1{
-    /* text-align: right; */
-    /* background-color: aquamarine; */
+.container1 h1 {
+    /* background-color: aqua; */
     font-size: 300%;
-    color: white;
     opacity: 0.9;
 }
 
 
-.container1 h4{
-    color: white;
+.container1 h4 {
     font-family: 'Rokkitt', serif;
     padding-top: 1%;
 }
 
+/*,,,,,,,,,,,,,,,, END CONTAINER 1 ,,,,,,,,,,,,,,,,*/
 
 .container2{
     padding: 8% 15% 10% 15%;
@@ -115,9 +117,11 @@ p{
 
 
 /* small screens */
-@media only screen
-and (min-device-width: 480px)
-and (max-device-width : 767px)  {
+@media screen and (max-width: 600px)
+/* and (min-device-width: 414px)
+and (max-device-width : 736px)   */
+
+{
     body {
         background-color: black;
         color: white;
