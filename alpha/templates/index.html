@@ -64,15 +64,30 @@
         </form>
 </div>
 
-<a name="samples"></a>
+<!-- <a name="samples"></a> -->
 <div class="container3">
     <p style="font-family: 'Anton', sans-serif; text-align: center;">
-        If you get up in the morning and think the future is going to be better, it is a bright day. Otherwise, it's not. ~ Elon Musk
+        I also am a developer, feel free to visit my page and have an amazing day :)
+        <div onclick="location.href='https://www.ramza.tech'" class="btn btn-three">
+            <a href="https://www.ramza.tech">
+                Let's GO!!
+            </a>
+        </div>
     </p>
 </div>
+
 
 <a name="contact"></a>
 {% include 'contact.html' %}
 {% endblock %}
+
+{%block script%}
+<!-- <script>
+    $(".btn btn-three").click(function () {
+            window.location = $(this).find("L").attr("href");
+            return false;
+        });
+</script> -->
+{%endblock%}
 </body>
 </html>
