@@ -49,6 +49,12 @@ def architecture(request):
     return render (request, 'photocase/architecture.html', {"title": title, "architecture_content": architecture_content})
 
 
+def automobiles(request):
+    title = "Photocase | Automobiles"
+    automobiles_content = automobiles.objects.all()
+    return render (request, 'photocase/automobiles.html', {"title": title, "automobiles_content": automobiles_content})
+
+
 # Error pages
 
 def error_404(request, exception):
