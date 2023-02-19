@@ -46,7 +46,7 @@ def landscapes(request):
 def architecture(request):
     title = "Photocase | Architecture"
     architecture_content = Architecture.objects.all()
-    return render (request, 'photocase/architecture.html', {"title": title, "architecture_content": architecture_content})
+    return render (request, 'architecture.html', {"title": title, "architecture_content": architecture_content})
 
 
 def automobiles(request):
