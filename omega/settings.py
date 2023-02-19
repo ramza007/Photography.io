@@ -139,7 +139,12 @@ USE_TZ = True
 
 # Forcing HTTPS
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# Activate for production
 SECURE_SSL_REDIRECT = True
+
+# Comment out during production
+# SECURE_SSL_REDIRECT = False
+
 
 
 STATIC_URL = '/static/'
