@@ -30,16 +30,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
+
+# For Local Testing
 DEBUG = True
 ALLOWED_HOSTS = []
 
-# For testing purposes 
-# DEBUG = False
-# ALLOWED_HOSTS = ['*']
-
 # for production
 # DEBUG = False
-# ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'photography-io.herokuapp.com']
+# ALLOWED_HOSTS = ['www.ramsa.studio', 'ramsa.studio']
 
 # Application definition
 
@@ -173,6 +171,8 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 # Prevents autofield error
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 
+"""
+******** Tried serving in S3 and locally; Will circle back **********
 if 'AWS_STORAGE_BUCKET_NAME' in os.environ:
 # AWS S3 settings
     AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
@@ -214,3 +214,30 @@ else:
     # Media Files Local
     MEDIA_URL = '/media/'
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+"""
+
+AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
+AWS_S3_REGION_NAME = 'us-east-2'
+AWS_DEFAULT_ACL = 'public-read'
+
+# Use S3 for static files
+STATICFILES_STORAGE = 'omega.custom_storages.StaticStorage'
+
+# Use S3 for media files
+DEFAULT_FILE_STORAGE = 'omega.custom_storages.MediaStorage'
+
+# Tell django-storages the domain to use to refer to static files.
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+# Use a cache for performance
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
+
+# URL that handles the media served from MEDIA_ROOT.
+MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, 'media')
+
+# URL that handles the static files served from STATIC_ROOT.
+STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, 'static')
