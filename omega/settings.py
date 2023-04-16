@@ -32,12 +32,12 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 
 # For Local Testing
-DEBUG = True
-ALLOWED_HOSTS = []
+# DEBUG = True
+# ALLOWED_HOSTS = []
 
 # for production
-# DEBUG = False
-# ALLOWED_HOSTS = ['www.ramsa.studio', 'ramsa.studio']
+DEBUG = False
+ALLOWED_HOSTS = ['www.ramsa.studio', 'ramsa.studio']
 
 # Application definition
 
