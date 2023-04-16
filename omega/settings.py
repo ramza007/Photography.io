@@ -2,6 +2,7 @@ import django_heroku
 from decouple import config
 from django.conf import settings
 import dj_database_url
+from . custom_storages import *
 
 """
 Django settings for omega project.
@@ -52,6 +53,7 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'bootstrap3',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -132,7 +134,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+"""
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
@@ -157,11 +159,58 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+
+django_heroku.settings(locals())
+"""
+
+# Email settings
 EMAIL_USE_TLS = config('EMAIL_USE_TLS')
 EMAIL_HOST = config('EMAIL_HOST')
 EMAIL_PORT = config('EMAIL_PORT')
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 
-django_heroku.settings(locals())
+# Prevents autofield error
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
+
+if 'AWS_STORAGE_BUCKET_NAME' in os.environ:
+# AWS S3 settings
+    AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
+    AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
+    AWS_S3_REGION_NAME = 'us-east-2'
+    AWS_DEFAULT_ACL = 'public-read'
+
+    # Use S3 for static files
+    STATICFILES_STORAGE = 'omega.custom_storages.StaticStorage'
+
+    # Use S3 for media files
+    DEFAULT_FILE_STORAGE = 'omega.custom_storages.MediaStorage'
+
+    # Tell django-storages the domain to use to refer to static files.
+    AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+    # Use a cache for performance
+    AWS_S3_OBJECT_PARAMETERS = {
+        'CacheControl': 'max-age=86400',
+    }
+
+    # URL that handles the media served from MEDIA_ROOT.
+    MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, 'media')
+
+    # URL that handles the static files served from STATIC_ROOT.
+    STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, 'static')
+else:
+    # Local settings
+    STATIC_URL = '/static/'
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, 'staticfiles'),
+    ]
+    
+    # Static Files Local
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+    # Media Files Local
+    MEDIA_URL = '/media/'
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

@@ -1,4 +1,3 @@
-# from tkinter import Image
 from django.db import models
 
 # -----------Location Model-----------
@@ -81,7 +80,7 @@ class Portraits(models.Model):
         Returns:
             images : list of image post objects from the database
         '''
-        images = Image.objects.all()
+        images = Portraits.objects.all()
         return images
 
         return Image.objects.all()
@@ -93,8 +92,8 @@ class Landscape(models.Model):
     image = models.ImageField(upload_to='photos/landscapes', null=True)
     site = models.CharField(max_length=30)
     image_description = models.TextField(max_length=300, null=True, blank=True)
-    location = models.CharField(max_length=30,null=True, blank=True)
-    timeshot = models.CharField(max_length=20, null=True,blank=True)
+    location = models.CharField(max_length=30, null=True, blank=True)
+    timeshot = models.CharField(max_length=20, null=True, blank=True)
 
     def save_image(self):
         '''Method to save an image in the database'''
@@ -114,7 +113,7 @@ class Landscape(models.Model):
         Returns:
             images : list of image post objects from the database
         '''
-        images = Image.objects.all()
+        images = Landscape.objects.all()
         return images
 
         return Image.objects.all()
@@ -151,7 +150,7 @@ class Architecture(models.Model):
         Returns:
             images : list of image post objects from the database
         '''
-        images = Image.objects.all()
+        images = Architecture.objects.all()
         return images
 
         return Image.objects.all()
@@ -186,7 +185,7 @@ class Automobiles(models.Model):
         Returns:
             images : list of image post objects from the database
         '''
-        images = Image.objects.all()
+        images = Automobiles.objects.all()
         return images
 
         return Image.objects.all()
@@ -195,9 +194,7 @@ class Automobiles(models.Model):
 # -----------End of Automobile Model-----------
 
 
-
 # -----------Email Model-----------
-
 class NewsletterRecepients(models.Model):
     name = models.CharField(max_length=30)
     email = models.EmailField()
