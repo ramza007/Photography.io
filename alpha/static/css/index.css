@@ -253,7 +253,7 @@ and (max-device-width : 1024px)  {
         /* background-image: url(../images/P1030814.JPG); */
         /* background-size: 80vh; */
         /* padding-bottom: 20vh; */
-        background-color: aqua;
+        /* background-color: aqua; */
         padding: 27vw;
         background-attachment: fixed;
     }
