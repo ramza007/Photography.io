@@ -1,7 +1,8 @@
+import dj_database_url
 import django_heroku
 from decouple import config
 from django.conf import settings
-import dj_database_url
+
 from .custom_storages import *
 
 """
@@ -17,6 +18,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+
 from decouple import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
