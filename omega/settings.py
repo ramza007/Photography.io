@@ -33,7 +33,8 @@ SECRET_KEY = config('SECRET_KEY')
 
 # For Local Testing
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["django.ramza.space"]
+
 
 # for production
 # DEBUG = False
