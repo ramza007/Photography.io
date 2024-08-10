@@ -34,6 +34,7 @@ SECRET_KEY = config('SECRET_KEY')
 # For Local Testing
 DEBUG = True
 ALLOWED_HOSTS = ["django.ramza.space"]
+CSRF_TRUSTED_ORIGINS =["https://django.ramza.space"]
 
 
 # for production
