@@ -34,7 +34,7 @@ SECRET_KEY = config('SECRET_KEY')
 # For Local Testing
 DEBUG = True
 ALLOWED_HOSTS = ["django.ramza.space", "ramsa.studio", "www.ramsa.studio"]
-CSRF_TRUSTED_ORIGINS =["https://django.ramza.space"]
+CSRF_TRUSTED_ORIGINS = ["https://django.ramza.space"]
 
 
 # for production
@@ -160,7 +160,7 @@ EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 
 # Prevents autofield error
-DEFAULT_AUTO_FIELD='django.db.models.AutoField'
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 """
 ******** Tried serving in S3 and locally; Will circle back **********
