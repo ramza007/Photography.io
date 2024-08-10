@@ -33,7 +33,7 @@ SECRET_KEY = config('SECRET_KEY')
 
 # For Local Testing
 DEBUG = True
-ALLOWED_HOSTS = ["django.ramza.space"]
+ALLOWED_HOSTS = ["django.ramza.space", "ramsa.studio", "www.ramsa.studio"]
 CSRF_TRUSTED_ORIGINS =["https://django.ramza.space"]
 
 
