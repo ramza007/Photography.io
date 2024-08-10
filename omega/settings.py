@@ -33,7 +33,8 @@ SECRET_KEY = config('SECRET_KEY')
 
 # For Local Testing
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["django.ramza.space"]
+CSRF_TRUSTED_ORIGINS =["https://django.ramza.space"]
 
 # for production
 # DEBUG = False
@@ -51,6 +52,7 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'bootstrap3',
+    # 'upload',
     'storages',
 ]
 
@@ -209,7 +211,7 @@ AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
 AWS_S3_REGION_NAME = 'us-east-2'
-AWS_DEFAULT_ACL = 'public-read'
+# AWS_DEFAULT_ACL = 'public-read'
 
 # Use S3 for static files
 STATICFILES_STORAGE = 'omega.custom_storages.StaticStorage'
@@ -218,7 +220,9 @@ STATICFILES_STORAGE = 'omega.custom_storages.StaticStorage'
 DEFAULT_FILE_STORAGE = 'omega.custom_storages.MediaStorage'
 
 # Tell django-storages the domain to use to refer to static files.
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+# AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.us-east-2.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
 
 # Use a cache for performance
 AWS_S3_OBJECT_PARAMETERS = {
@@ -230,3 +234,5 @@ MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, 'media')
 
 # URL that handles the static files served from STATIC_ROOT.
 STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, 'static')
+# STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
+
