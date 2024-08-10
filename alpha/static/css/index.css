@@ -15,17 +15,34 @@ h2{
 
 /*,,,,,,,,,,,,,,,, CONTAINER 1 ,,,,,,,,,,,,,,,,*/
 
-.container1{
+.container1 {
     background-image: url(../images/RO-001-20.jpeg);
-    background-size: 100%;
+    background-size: 102%;
     padding: 45vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
     text-align: right;
-    font-size: 100%;
+    font-size: 1.5rem; /* Default font size */
     color: white;
 }
 
+@media (max-width: 768px) {
+    .container1 {
+        font-size: 1.2rem; /* Smaller font size for smaller screens */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container1 {
+        font-size: 1.4rem; /* Medium font size for tablets */
+    }
+}
+
+@media (min-width: 1025px) {
+    .container1 {
+        font-size: 1.5rem; /* Larger font size for desktops */
+    }
+}
 .container1 h1 {
     /* background-color: aqua; */
     font-size: 300%;
@@ -240,69 +257,6 @@ and (max-device-width : 736px)   */
     }
 }
 
-
-/* ipads */
-@media only screen 
-and (min-device-width : 801px) 
-and (max-device-width : 1024px)  {
- body {
-        font-size: medium;
-    }
-
-    .container1{
-        /* background-image: url(../images/P1030814.JPG); */
-        /* background-size: 80vh; */
-        /* padding-bottom: 20vh; */
-        background-color: aqua;
-        padding: 27vw;
-        background-attachment: fixed;
-    }
-
-    .container1 h1 {
-        padding-top: 45vh;
-        text-align: center;
-        font-size: 6vw;
-    }
-    .container2 {
-        padding: 10vw;
-        padding-bottom: 0;
-        overflow: auto;
-        width: 100%;
-        font-size: 2vw;
-    }
-    
-    .container2 p{
-        font-size: 155%;
-    }
-    
-    .container2 img{
-        vertical-align: text-bottom;
-        width: 100%;
-        margin-bottom: 10vw;
-        padding: 0;
-        border-radius: 5px;
-    }
-    .container2 h2 {
-        color: black;
-        
-    }
-    .form-inline{
-        font-family: 'Rokkitt', serif;
-        font-size: 115%;
-        text-align: center;
-    }
-
-    .form-inline input {
-        background-color: white;
-        font-size: larger;
-        color: black;
-        border: 1px solid rgb(189, 189, 189);
-    }
-
-    .form-inline p{
-        padding: 4vh 0 2vh 0;
-    }
-}
 
 
 
