@@ -42,6 +42,7 @@ Boston, Massachusetts
 
 **Amego, Inc. / I.T Technician**  
 _February 2022 - Present, Attleboro, MA_  
+
 - First responder to inquiries and employee needs in the IT department.
 - Managed department ticketing systems.
 - Maintained equipment and diagnosed software and hardware issues.
@@ -49,11 +50,13 @@ _February 2022 - Present, Attleboro, MA_
 
 **Quincy College / Computer Science Peer Tutor**  
 _December 2020 - May 2021, Quincy, MA_  
+
 - Peer tutored students in analyzing and solving computer science problems.
 - Focused on solutions involving C, C++, Python, and Shell.
 
 **Moringa School / Full Stack Developer**  
 _February 2018 - August 2019, Nairobi, KE_  
+
 - Trained in:
     - Python Full Stack Web dev.
     - Angular

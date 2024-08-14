@@ -1,9 +1,15 @@
+import markdown
+from pathlib import Path
+
 from django.shortcuts import render
 from django.template import RequestContext
 from .models import Location, Timeshot, Details, Portraits, NewsletterRecepients, Landscape, Architecture, Automobiles
 from .forms import NewsLetterForm
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from .email import send_welcome_email
+from django.conf import settings
+from django.utils.html import escape
+
 
 
 # Create your views here.
@@ -54,6 +60,26 @@ def automobiles(request):
     automobiles_content = Automobiles.objects.all()
     return render (request, 'automobiles.html', {"title": title, "automobiles_content": automobiles_content})
 
+def resume(request):
+    title = "Ramsa Ombati - Resume"
+    
+    # Construct the path to the Markdown file
+    markdown_file_path = "./README.md"
+    
+    # Read the Markdown file
+    with open(markdown_file_path, 'r') as file:
+        markdown_content = file.read()
+    
+    # Convert Markdown to HTML
+    html_content = markdown.markdown(markdown_content)
+    
+    # Create context
+    context = {
+        "title": title,
+        "markdown_content": html_content
+    }
+    
+    return render(request, 'resume.html', context)
 
 # Error pages
 

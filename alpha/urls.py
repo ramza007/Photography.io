@@ -16,6 +16,7 @@ urlpatterns = [
     path('landscapes', views.landscapes, name='landscapes'),
     path('architecture', views.architecture, name='architecture'),
     path('automobiles', views.automobiles, name='automobiles'),
+    path('resume', views.resume, name='resume'),
 ]
 
 # Serving static files during development only
