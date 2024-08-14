@@ -1,4 +1,4 @@
-# Ramsa Ombati
+# <b>Ramsa Ombati</b>
 
 **Software Developer**  
 Boston, Massachusetts  
@@ -6,29 +6,28 @@ Boston, Massachusetts
 **Phone:** (443) 347-2396  
 **Email:** ombati@ramsa.studio  
 
----
 
 ## Skills
 
 ### Front End Development
-- HTML
-- CSS
-- JavaScript
-
+- React JS
 - Bootstrap CSS
 - CDNs
+- HTML, CSS, JavaScript stack
 
 ### Back End Development
+- C
 - Python
-- Django
-- Flask
-- Git
+    - Django
+    - Flask
 - PostgreSQL
 - REST APIs
+- Git
+- Shell & Bash Script
+- AWS S3
 
 ### Experienced In:
 - Angular
-- AWS S3
 - Docker
 - Heroku
 - Large Language Models and Transformers (LLMs)
@@ -37,7 +36,7 @@ Boston, Massachusetts
 - Adobe Photoshop Classic
 - Adobe Premiere Pro
 
----
+
 
 ## Experience
 
@@ -46,6 +45,7 @@ _February 2022 - Present, Attleboro, MA_
 - First responder to inquiries and employee needs in the IT department.
 - Managed department ticketing systems.
 - Maintained equipment and diagnosed software and hardware issues.
+- Provide support for key IT projects
 
 **Quincy College / Computer Science Peer Tutor**  
 _December 2020 - May 2021, Quincy, MA_  
@@ -54,13 +54,15 @@ _December 2020 - May 2021, Quincy, MA_
 
 **Moringa School / Full Stack Developer**  
 _February 2018 - August 2019, Nairobi, KE_  
-- Trained in Python full stack web development.
+- Trained in:
+    - Python Full Stack Web dev.
+    - Angular
 
----
+
 
 ## Education
 
-**University of Massachusetts - Boston / B.S. in Computer Science**  
+**University of Massachusetts - Boston / B.S. Computer Science**  
 _Anticipated Graduation - Fall 2025, Boston, MA_
 
 **Quincy College / A.S. in Computer Science**  
