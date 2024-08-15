@@ -1,5 +1,6 @@
 # <b>Ramsa Ombati</b>
 
+
 **Software Developer**  
 Boston, Massachusetts  
 
@@ -76,7 +77,6 @@ _August 2019 - May 2021, Quincy, MA_
 _February 2018 - August 2019, Nairobi, KE_  
 - Certified Full Stack Web Developer
 
----
 
 ## Awards
 
@@ -88,3 +88,5 @@ _February 2018 - August 2019, Nairobi, KE_
 
 **Supreme Court of Kenya / Community Service**  
 _August 2017, Nairobi, KE_
+
+<br>
