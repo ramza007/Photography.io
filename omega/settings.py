@@ -239,13 +239,12 @@ MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, 'media')
 
 
 if os.getenv('DJANGO_PRODUCTION', 'false') == 'true':
-    # URL that handles the static files served from STATIC_ROOT.
+    # Production settings
     STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, 'static')
-    STATIC_ROOT = os.path.join(BASE_DIR, 'alpha', 'static')  # Ensure STATIC_ROOT is set for Heroku
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # A separate directory for collected static files
 
 else:
+    # Development settings
     STATIC_URL = '/static/'
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'alpha', 'static')]
-    STATIC_ROOT = os.path.join(BASE_DIR, 'alpha', 'static')
-
-    
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'alpha', 'static')]  # Your static files inside the app
+    STATIC_ROOT = os.path.join(BASE_DIR, 'alpha', 'static')  # Keep this the same as STATICFILES_DIRS
