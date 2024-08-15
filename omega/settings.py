@@ -244,4 +244,4 @@ if os.getenv('DJANGO_PRODUCTION', 'false') == 'true':
 else:
     STATIC_URL = '/static/'
     STATICFILES_DIRS = [os.path.join(BASE_DIR, 'alpha', 'static')]
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    STATIC_ROOT = os.path.join(BASE_DIR, 'alpha', 'static')
