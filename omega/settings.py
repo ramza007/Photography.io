@@ -236,5 +236,12 @@ AWS_S3_OBJECT_PARAMETERS = {
 # URL that handles the media served from MEDIA_ROOT.
 MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, 'media')
 
-# URL that handles the static files served from STATIC_ROOT.
-STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, 'static')
+
+
+if os.getenv('DJANGO_PRODUCTION', 'false') == 'true':
+    # URL that handles the static files served from STATIC_ROOT.
+    STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, 'static')
+else:
+    STATIC_URL = '/static/'
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'alpha', 'static')]
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
