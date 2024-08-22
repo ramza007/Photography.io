@@ -247,4 +247,4 @@ else:
     # Development settings
     STATIC_URL = '/static/'
     STATICFILES_DIRS = [os.path.join(BASE_DIR, 'alpha', 'static')]  # Your static files inside the app
-    STATIC_ROOT = os.path.join(BASE_DIR, 'alpha', 'static')  # Keep this the same as STATICFILES_DIRS
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Keep this the same as STATICFILES_DIRS

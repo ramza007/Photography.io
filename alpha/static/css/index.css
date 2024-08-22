@@ -17,13 +17,20 @@ h2{
 
 .container1 {
     background-image: url(../images/RO-001-20.jpeg);
-    background-size: 102%;
-    padding: 45vh;
+    padding: 55vh 2vw 35vh 50vw;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    text-align: right;
-    font-size: 1.5rem; /* Default font size */
+    font-size: 1.9rem;
     color: white;
+    /* text-align: right; */
+}
+
+.container1 p   {
+    /* background-color: antiquewhite; */
+    padding: 0%;
+    font-size: 2rem;
 }
 
 @media (max-width: 768px) {
@@ -57,15 +64,6 @@ h2{
 
 /*,,,,,,,,,,,,,,,, END CONTAINER 1 ,,,,,,,,,,,,,,,,*/
 
-.container2{
-    padding: 8% 15% 10% 15%;
-    text-align: left;
-}
-
-.container2 p{
-    font-size: 1.3vw; 
-
-}
 
 img{
     width: 45%;
@@ -82,7 +80,7 @@ p{
 
 /*,,,,,,,,,,,,,,,, CONTAINER 3 ,,,,,,,,,,,,,,,,*/
 .container3{
-    margin-top: 13%;
+    /* margin-top: 1%; */
     padding: 20%;
     background-image: url(../images/123.jpg);
     background-position: center;
@@ -206,39 +204,19 @@ and (max-device-width : 736px)   */
 
     .container1{
         background-image: url(../images/ramzavertical.jpg);
-        background-size: 65vh;
-        padding-bottom: 20vh;
-        padding: 27vw;
+        padding: 60vh 7vw 50vh 7vw;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         background-attachment: fixed;
     }
 
     .container1 h1 {
-        padding-top: 45vh;
+        padding: 0;
         text-align: center;
     }
-    .container2 {
-        padding: 10vw;
-        padding-bottom: 0;
-        overflow: auto;
-        width: 100%;
-    }
-    
-    .container2 p{
-        font-size: 155%;
-    }
-    
-    .container2 img{
-        vertical-align: text-bottom;
-        /* display: none; */
-        width: 100%;
-        margin-bottom: 10vw;
-        padding: 0;
-        border-radius: 5px;
-    }
-    .container2 h2 {
-        color: white;
-        
-    }
+
+
     .form-inline{
         padding: 0;
         font-family: 'Rokkitt', serif;
