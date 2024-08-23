@@ -220,7 +220,7 @@ AWS_S3_REGION_NAME = 'us-east-2'
 AWS_DEFAULT_ACL = 'public-read'
 
 # Use S3 for static files
-STATICFILES_STORAGE = 'omega.custom_storages.StaticStorage'
+# STATICFILES_STORAGE = 'omega.custom_storages.StaticStorage'
 
 # Use S3 for media files
 DEFAULT_FILE_STORAGE = 'omega.custom_storages.MediaStorage'
@@ -239,12 +239,12 @@ MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, 'media')
 
 
 if os.getenv('DJANGO_PRODUCTION', 'false') == 'true':
-    # Production settings
+    print("Production settings applied.")
     STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, 'static')
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # A separate directory for collected static files
-
+    STATICFILES_STORAGE = 'omega.custom_storages.StaticStorage'
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 else:
-    # Development settings
+    print("Development settings applied.")
     STATIC_URL = '/static/'
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'alpha', 'static')]  # Your static files inside the app
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Keep this the same as STATICFILES_DIRS
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'alpha', 'static')]
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
