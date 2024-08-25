@@ -226,7 +226,8 @@ AWS_DEFAULT_ACL = 'public-read'
 DEFAULT_FILE_STORAGE = 'omega.custom_storages.MediaStorage'
 
 # Tell django-storages the domain to use to refer to static files.
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.us-east-2.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
 
 # Use a cache for performance
 AWS_S3_OBJECT_PARAMETERS = {
