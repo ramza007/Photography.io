@@ -9,9 +9,11 @@ from django.conf.urls.static import static
 from alpha import urls, views
 # from django.conf.urls import url
 from django.views.static import serve
+from alpha import views as alpha_views
 
 handler404 = views.error_404
 handler500 = views.error_500
+handler404 = alpha_views.error_404
 
 urlpatterns = [
     path('admin/', admin.site.urls),

@@ -84,7 +84,7 @@ def resume(request):
 # Error pages
 
 def error_404(request, exception):
-    return render(request, 'error_404.html')
+    return render(request, 'error_404.html', status=404)
 
 
 def error_500(request):

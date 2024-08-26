@@ -1,7 +1,7 @@
 .container{
-    padding: 25% 20% 25% 20%;
+    padding: 10%;
     text-align: center;
-    /* background-color: aqua; */
+    background-color: aqua;
 }
 
 .container h1{
