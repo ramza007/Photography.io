@@ -198,18 +198,27 @@ and (max-device-width : 736px)   */
 
 {
     body {
+        /* overflow: auto; */
         background-color: black;
         color: white;
         margin-bottom: 5%;
     }
 
     .container1{
-        background-image: url(../images/ramzavertical.jpg);
         padding: 60vh 7vw 50vh 7vw;
-        background-size: cover;
-        background-position: center;
+        background-image: url(../images/ramzavertical.jpg);
+        /* background-size: 100vw 100vh; */
+        /* background-position: fixed; */
+        background-position: center top;
         background-repeat: no-repeat;
-        background-attachment: fixed;
+        background-attachment: fixed !important;
+        /* height: 100vh; */
+    }
+
+  
+    .container1 url{
+        height: 100%;
+        position: fixed;
     }
 
     .container1 h1 {
