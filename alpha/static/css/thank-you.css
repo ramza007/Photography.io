@@ -1,0 +1,26 @@
+/* Cascading style sheet for Thank-you.html */
+
+.container{
+    /* background-color: aqua; */
+    text-align: center;
+    padding: 22% 18% 27% 18%;
+}
+
+.container h1{
+    font-family: 'Alfa Slab One', cursive;
+    
+}
+
+.container p{
+    font-family: 'Rokkitt', serif;
+    text-decoration: none;
+    font-size: large;
+}
+
+@media (max-width: 850px) {
+    .container{
+        margin-top: 50vw;
+        padding: 2vw;
+        margin-bottom: 60vh;
+    }
+}

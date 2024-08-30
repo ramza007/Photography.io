@@ -21,3 +21,5 @@ deployment.sh
 
 staticfiles
 deploy.sh
+
+alpha/static/

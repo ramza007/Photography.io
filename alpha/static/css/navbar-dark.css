@@ -1,0 +1,107 @@
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #121212;
+  margin-bottom: 5%;
+  font-family: 'Alfa Slab One';
+  padding: 0% 0.5% 0% 0.5%;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 120%;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: grey;
+}
+
+/* Smaller screens */
+@media(max-width:850px) {
+  .topnav {
+    padding: 0;
+    margin: 0;
+  }
+
+  .pull-right {
+    display: none;
+  }
+
+  .openbtn {
+    text-align: right; 
+  }
+}
+
+/* Larger screens */
+@media(min-width: 800px) {
+  .openbtn {
+    display: none;
+  }
+}
+
+/* iPads and unconventional screens */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px),
+       only screen and (min-width: 853px) and (max-width: 1280px) {
+  .openbtn {
+    display: none;
+  }
+
+  .pull-right {
+    display: block;
+  }
+}
+
+/* side navbar */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  opacity: 94%;
+}
+
+.sidebar a {
+  padding: 3vw; 
+  text-decoration: none;
+  font-size: 150%;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}
