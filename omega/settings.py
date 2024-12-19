@@ -26,7 +26,7 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DJANGO_DEBUG', default=False, cast=bool)
 # ALLOWED_HOSTS = ["django.ramza.space", "ramsa.studio", "www.ramsa.studio", "photography-io.herokuapp.com"]
 ALLOWED_HOSTS = config('DJANGO_ALLOWED_HOSTS', default='', cast=str).split(',') # type: ignore
-CSRF_TRUSTED_ORIGINS =["https://django.ramza.space"]
+CSRF_TRUSTED_ORIGINS =["https://django.ramza.online"]
 
 
 # Application definition
