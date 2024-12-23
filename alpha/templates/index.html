@@ -26,50 +26,38 @@
 {% block content %} {{block.super}}
 {% include 'navbar.html' %}
 <div class="container1">
-        <h1 style="font-family: 'Alfa Slab One', cursive;">
-            WELCOME TO MY WORLD
-        </h1>
-
-        <h4>
-            The Photographer
-        </h4>
-</div>
-
-
-<a name="about"></a>
-    <div class="container2">
-    <h2 style="font-family: 'Alfa Slab One', cursive; padding-bottom: 5%;">Face Behind the Camera...</h2>
-    
-    <img align="left" src="{% static 'images/ramza2.JPG' %}" alt="Ramsa's Face">
-    <p align="right" style="text-align: left;">
-            Hey there, I'm Ramsa Ombati, a photographer and web developer. My passion for photography started when I got my first smartphone, and began ameture photography. I slowly built this into a passion and never looked back ever since.
+    <p>
+            Hey there, I'm Ramsa , a web developer and photographer. I started this site as a way to display my work without the pressures of social media to follow trends. This a space made by and for me.
 
             <br><br>
 
             <b>
-                I ventured into this field not knowing what ISO does, and with the support of friends turned this into a hobby that lead to amazing interactions.
+                I ventured into photography to capture art and freeze subjects in perfect frame, 
             </b>
 
             <br><br>
-            Follow me on my adventures and exlpore the different mix of formats 
+            I also dabble in videography. More to come.
     </p>
 
-        <form class="form-inline" action="{%url 'email'%}" method="post" style="float:right;">
-            {%csrf_token%}
-            <p>
-                Sign up to stay updated and support me  :)
-            </p>
-            <input type="email" id="email" placeholder="Email Address" name="email" required>
-            <button type="submit" style="color: black;">Sign Up</button>
-        </form>
+    <form class="form-inline" action="{%url 'email'%}" method="post" style="float:right;">
+        {%csrf_token%}
+        <p>
+            If you're still here drop an email to reach out to me 
+        </p>
+        <input type="email" id="email" placeholder="Email Address" name="email" required>
+        <button type="submit" style="color: black;">Sign Up</button>
+    </form>
 </div>
+
+
+<!-- <a name="about"></a> -->
 
 <!-- <a name="samples"></a> -->
 <div class="container3">
     <p style="font-family: 'Anton', sans-serif; text-align: center;">
-        I also am a developer, feel free to visit my page and have an amazing day :)
-        <div onclick="location.href='https://www.ramza.tech'" class="btn btn-three">
-            <a href="https://www.ramza.tech">
+        I also write code; This website's source code is on my github
+        <div onclick="location.href='https://github.com/ramza007/Photography.io'" class="btn btn-three">
+            <a href="https://github.com/ramza007?tab=repositories">
                 Let's GO!!
             </a>
         </div>

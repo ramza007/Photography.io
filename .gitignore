@@ -20,3 +20,6 @@ deployment.sh
 # end of text
 
 staticfiles
+deploy.sh
+
+alpha/static/

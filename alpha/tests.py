@@ -1,5 +1,5 @@
 from django.test import TestCase
-from .models import Location, Timeshot, Details, Image
+from .models import Location, Timeshot, Details
 
 # Create your tests here.
 
