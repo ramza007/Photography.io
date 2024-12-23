@@ -21,12 +21,19 @@ SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
+<<<<<<< Updated upstream
 # DEBUG will be True if the environment variable DJANGO_DEBUG is set to 'true',
 # otherwise it will be False (as is required in production)
 DEBUG = config('DJANGO_DEBUG', default=False, cast=bool)
 # ALLOWED_HOSTS = ["django.ramza.space", "ramsa.studio", "www.ramsa.studio", "photography-io.herokuapp.com"]
 ALLOWED_HOSTS = config('DJANGO_ALLOWED_HOSTS', default='', cast=str).split(',') # type: ignore
 CSRF_TRUSTED_ORIGINS =["https://django.ramza.online"]
+=======
+# For Local Testing
+DEBUG = True
+ALLOWED_HOSTS = ["django.ramza.online"]
+CSRF_TRUSTED_ORIGINS =["https://django.ramza.space"]
+>>>>>>> Stashed changes
 
 
 # Application definition
