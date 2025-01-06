@@ -151,10 +151,6 @@ AWS_S3_REGION_NAME = 'us-east-2'
 DEFAULT_FILE_STORAGE = 'omega.custom_storages.MediaStorage'
 
 # Tell django-storages the domain to use to refer to static files.
-<<<<<<< HEAD
-# AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-=======
->>>>>>> master
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.us-east-2.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
 
@@ -166,12 +162,6 @@ AWS_S3_OBJECT_PARAMETERS = {
 # URL that handles the media served from MEDIA_ROOT.
 MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, 'media')
 
-<<<<<<< HEAD
-# URL that handles the static files served from STATIC_ROOT.
-STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, 'static')
-# STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
-
-=======
 
 
 if os.getenv('DJANGO_PRODUCTION', 'false') == 'true':
@@ -184,4 +174,3 @@ else:
     STATIC_URL = '/static/'
     STATICFILES_DIRS = [os.path.join(BASE_DIR, 'alpha', 'static')]
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
->>>>>>> master
