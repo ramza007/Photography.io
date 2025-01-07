@@ -21,10 +21,12 @@ SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-# For Local Testing
-DEBUG = True
-ALLOWED_HOSTS = ["django.ramza.online"]
-CSRF_TRUSTED_ORIGINS =["https://django.ramza.space"]
+# DEBUG will be True if the environment variable DJANGO_DEBUG is set to 'true',
+# otherwise it will be False (as is required in production)
+DEBUG = config('DJANGO_DEBUG', default=False, cast=bool)
+# ALLOWED_HOSTS = ["django.ramza.space", "ramsa.studio", "www.ramsa.studio", "photography-io.herokuapp.com"]
+ALLOWED_HOSTS = config('DJANGO_ALLOWED_HOSTS', default='', cast=str).split(',') # type: ignore
+CSRF_TRUSTED_ORIGINS =["https://django.ramza.online"]
 
 
 # Application definition
@@ -39,7 +41,6 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'bootstrap3',
-    # 'upload',
     'storages',
 ]
 
@@ -142,7 +143,7 @@ AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
 AWS_S3_REGION_NAME = 'us-east-2'
-# AWS_DEFAULT_ACL = 'public-read'
+AWS_DEFAULT_ACL = 'public-read'
 
 # Use S3 for static files
 # STATICFILES_STORAGE = 'omega.custom_storages.StaticStorage'
